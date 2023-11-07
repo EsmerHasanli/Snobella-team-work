@@ -5,10 +5,15 @@
           box-sizing: border-box;
 }
 
-li {
-  list-style-type: none;
-}
-
 a {
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+ul {
+  list-style: none;
+}
+
+/*phone respnsive*/
+/* tablet responsive */
+/* desktop responsive */
+/*tv responsive*//*# sourceMappingURL=style.css.map */
