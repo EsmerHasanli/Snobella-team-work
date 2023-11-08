@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -23,15 +22,9 @@ footer {
   background-color: #F7F7F9;
 }
 footer .footer-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 39px 0 36px 0;
   border-bottom: 1px solid rgba(39, 49, 66, 0.15);
 }
@@ -53,29 +46,16 @@ footer .footer-top .search-input svg {
 
 footer .footer-body {
   padding-bottom: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between !important;
+  align-items: center;
 }
 
 #footer-links {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: flex-end;
-          flex-direction: flex-end;
+  flex-direction: flex-end;
   padding-top: 51px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 #footer-links h3 {
   margin-bottom: 20px;
@@ -140,15 +120,9 @@ footer .footer-body {
 #credential {
   padding: 22px 0;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 #credential span {
   color: rgba(33, 33, 33, 0.75);
@@ -160,15 +134,9 @@ footer .footer-body {
   line-height: 170%;
 }
 #credential ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 #credential ul li {
   margin-right: 32px;
@@ -176,27 +144,75 @@ footer .footer-body {
 
 /*phone respnsive*/
 @media (max-width: 640px) {
+  #header .phone span {
+    font-size: 10px !important;
+  }
+  #header .info ul li {
+    font-size: 10px !important;
+    margin-left: 10px !important;
+  }
+  #nav .nav-item .main-item {
+    display: none !important;
+  }
+  #nav .nav-item .search input {
+    width: 100%;
+  }
   .search-input {
     display: none;
   }
-  #footer-links {
+  #footer #footer-links {
+    display: none !important;
+  }
+  #footer .input-group {
     display: none !important;
   }
   #credential ul {
     margin-top: 10px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
 /* tablet responsive */
 @media only screen and (min-width: 640px) and (max-width: 768px) {
-  #footer-links {
+  #nav .main-item {
+    display: none !important;
+  }
+  .hamburger-menu {
+    display: block !important;
+  }
+  #footer #footer-links {
+    display: none !important;
+  }
+  #footer .input-group {
     display: none !important;
   }
 }
 /* desktop responsive */
+@media only screen and (min-width: 768px) and (max-width: 998px) {
+  #nav .nav-item .search input {
+    width: 330px;
+  }
+  #nav .nav-item .main-item .item {
+    margin-left: 5px;
+  }
+  #nav .nav-item .main-item .item span {
+    margin-left: 3px;
+  }
+  #footer #footer-links {
+    display: none !important;
+  }
+  #footer .input-group {
+    display: none !important;
+  }
+}
 /*tv responsive*/
+@media only screen and (min-width: 998px) and (max-width: 1400px) {
+  #nav .main-item .item {
+    margin-left: 10px;
+  }
+  #nav .main-item .item span {
+    margin-left: 3px;
+  }
+}
 #hero {
   background-color: #FFE2E0;
   padding: 99px 0 47px 0;
@@ -247,23 +263,13 @@ footer .footer-body {
   padding: 55px 0;
 }
 #features .feat-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 #features .feat-row .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 #features .feat-row h2.item-header {
   margin-left: 8px;
@@ -310,22 +316,19 @@ footer .footer-body {
 #nav .search input {
   width: 504px;
   height: 48px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
   border: none;
   background: #F7F9FC;
   padding: 0px 10px;
+  border-radius: 8px;
 }
 #nav .search svg {
   position: absolute;
-  right: 3px;
+  right: 8%;
   top: 12px;
-  border: 8px;
 }
 #nav .main-item {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 #nav .item {
   margin-left: 26px;
@@ -338,12 +341,12 @@ footer .footer-body {
   padding: 83px 0 96px 0;
 }
 
-.swiper {
+#product-sliders .swiper {
   width: 100%;
-  height: 165;
+  height: 165px;
   margin: 20px auto;
 }
-.swiper .swiper-slide {
+#product-sliders .swiper .slider2 {
   position: relative;
   padding: 20px;
   width: 264px !important;
@@ -357,43 +360,33 @@ footer .footer-body {
   background: #F5F5F5;
   border-radius: 8px;
 }
-.swiper .swiper-slide img {
+#product-sliders .swiper .slider2 img {
   position: absolute;
   bottom: 0;
   right: 0;
   height: 90%;
   width: 40%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
-.swiper-button-next {
+#product-sliders .swiper-button-next {
   position: absolute;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   background-color: white;
   border-radius: 50%;
   color: black;
   font-size: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   z-index: 10;
   border: 1px solid grey;
 }
-
-.swiper-button-next:after {
+#product-sliders .swiper-button-next:after {
   font-size: 18px !important;
 }
 
@@ -407,35 +400,34 @@ footer .footer-body {
   font-style: normal;
   font-weight: 500;
   line-height: 170%;
+  margin-bottom: 32px;
 }
-#products .card .imgbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#products .slider {
+  width: 360px !important;
+}
+#products .slider .card .imgbox {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   position: relative;
 }
-#products .card .imgbox .new {
+#products .slider .card .imgbox img {
+  object-fit: cover;
+  width: 218px;
+  height: 243px;
+}
+#products .slider .card .imgbox .new {
   position: absolute;
   width: 79px;
   height: 32px;
   border-radius: 8px;
   background: #43D167;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   top: 16px;
   left: 16px;
 }
-#products .card .imgbox .new span {
+#products .slider .card .imgbox .new span {
   color: #FFF;
   font-family: Poppins;
   font-size: 16px;
@@ -443,23 +435,23 @@ footer .footer-body {
   font-weight: 500;
   line-height: 170%;
 }
-#products .card .imgbox svg {
+#products .slider .card .imgbox svg {
   position: absolute;
   width: 22px;
   height: 22px;
   top: 16px;
   right: 16px;
 }
-#products .card .card-body {
+#products .slider .card .card-body {
   padding: 28px 24px;
 }
-#products .card .card-body .rate svg {
+#products .slider .card .card-body .rate svg {
   margin-left: 6px;
 }
-#products .card .card-body .rate svg:nth-child(1) {
+#products .slider .card .card-body .rate svg:nth-child(1) {
   margin-left: 0;
 }
-#products .card .card-body .card-title h3 {
+#products .slider .card .card-body .card-title h3 {
   color: #000;
   font-family: Rubik;
   font-size: 16px;
@@ -468,16 +460,12 @@ footer .footer-body {
   line-height: 170%;
   margin: 16px 0px;
 }
-#products .card .card-body .price {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#products .slider .card .card-body .price {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 16px 0px;
 }
-#products .card .card-body .price h3 {
+#products .slider .card .card-body .price h3 {
   color: #F75145;
   font-family: Poppins;
   font-size: 20px;
@@ -486,7 +474,7 @@ footer .footer-body {
   line-height: 170%;
   margin: 0;
 }
-#products .card .card-body .price span {
+#products .slider .card .card-body .price span {
   color: rgba(54, 54, 54, 0.75);
   font-family: Poppins;
   font-size: 16px;
@@ -495,11 +483,217 @@ footer .footer-body {
   line-height: 170%;
   margin-left: 18px;
 }
-#products .card .card-body .add-btn {
+#products .slider .card .card-body .add-btn {
   margin: 0 auto;
 }
-#products .card .card-body .add-btn button {
-  width: 312px;
+#products .slider .card .card-body .add-btn button {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #212121;
+}
+
+#best-seller {
+  margin-bottom: 96px;
+}
+#best-seller h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  margin-bottom: 32px;
+}
+#best-seller .slider {
+  width: 360px !important;
+}
+#best-seller .slider .card .imgbox {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#best-seller .slider .card .imgbox img {
+  object-fit: cover;
+  width: 218px;
+  height: 243px;
+}
+#best-seller .slider .card .imgbox .new {
+  position: absolute;
+  width: 79px;
+  height: 32px;
+  border-radius: 8px;
+  background: #43D167;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 16px;
+  left: 16px;
+}
+#best-seller .slider .card .imgbox .new span {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+}
+#best-seller .slider .card .imgbox svg {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 16px;
+  right: 16px;
+}
+#best-seller .slider .card .card-body {
+  padding: 28px 24px;
+}
+#best-seller .slider .card .card-body .rate svg {
+  margin-left: 6px;
+}
+#best-seller .slider .card .card-body .rate svg:nth-child(1) {
+  margin-left: 0;
+}
+#best-seller .slider .card .card-body .card-title h3 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  margin: 16px 0px;
+}
+#best-seller .slider .card .card-body .price {
+  display: flex;
+  align-items: center;
+  margin: 16px 0px;
+}
+#best-seller .slider .card .card-body .price h3 {
+  color: #F75145;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 170%;
+  margin: 0;
+}
+#best-seller .slider .card .card-body .price span {
+  color: rgba(54, 54, 54, 0.75);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  margin-left: 18px;
+}
+#best-seller .slider .card .card-body .add-btn {
+  margin: 0 auto;
+}
+#best-seller .slider .card .card-body .add-btn button {
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #212121;
+}
+
+#discount-products {
+  margin-bottom: 96px;
+}
+#discount-products h1 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+  margin-bottom: 32px;
+}
+#discount-products .slider {
+  width: 360px !important;
+}
+#discount-products .slider .card .imgbox {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#discount-products .slider .card .imgbox img {
+  object-fit: cover;
+  width: 218px;
+  height: 243px;
+}
+#discount-products .slider .card .imgbox .new {
+  position: absolute;
+  width: 79px;
+  height: 32px;
+  border-radius: 8px;
+  background: #43D167;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 16px;
+  left: 16px;
+}
+#discount-products .slider .card .imgbox .new span {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%;
+}
+#discount-products .slider .card .imgbox svg {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 16px;
+  right: 16px;
+}
+#discount-products .slider .card .card-body {
+  padding: 28px 24px;
+}
+#discount-products .slider .card .card-body .rate svg {
+  margin-left: 6px;
+}
+#discount-products .slider .card .card-body .rate svg:nth-child(1) {
+  margin-left: 0;
+}
+#discount-products .slider .card .card-body .card-title h3 {
+  color: #000;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  margin: 16px 0px;
+}
+#discount-products .slider .card .card-body .price {
+  display: flex;
+  align-items: center;
+  margin: 16px 0px;
+}
+#discount-products .slider .card .card-body .price h3 {
+  color: #F75145;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 170%;
+  margin: 0;
+}
+#discount-products .slider .card .card-body .price span {
+  color: rgba(54, 54, 54, 0.75);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  margin-left: 18px;
+}
+#discount-products .slider .card .card-body .add-btn {
+  margin: 0 auto;
+}
+#discount-products .slider .card .card-body .add-btn button {
+  width: 100%;
   height: 48px;
   border-radius: 8px;
   border: 1px solid #212121;

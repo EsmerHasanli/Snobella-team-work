@@ -1,4 +1,4 @@
-//#region home page swipers 
+//#region home page swipers
 var swiper = new Swiper(".mySwiper", {
   initialSlide: 1,
   slidesPerView: 3,
@@ -33,14 +33,12 @@ document
       '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
     );
   });
-document
-  .querySelector(".append-slide")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    swiper.appendSlide(
-      '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
-    );
-  });
+document.querySelector(".append-slide").addEventListener("click", function (e) {
+  e.preventDefault();
+  swiper.appendSlide(
+    '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+  );
+});
 document
   .querySelector(".append-2-slides")
   .addEventListener("click", function (e) {
@@ -51,3 +49,7 @@ document
     ]);
   });
 //#endregion
+
+
+
+
