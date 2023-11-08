@@ -4,7 +4,7 @@
 // }
 
 //hero section
-#hero{
+#hero {
     background-color: #FFE2E0;
     padding: 25px 0;
     .hero-section-preview{
@@ -16,7 +16,8 @@
             font-weight: 500;
             line-height: 170%;
         }
-        h1.hero{
+
+        h1.hero {
             color: #212121;
             font-family: Rubik;
             font-size: 40px;
@@ -24,7 +25,8 @@
             font-weight: 700;
             line-height: 170%;
         }
-        p.hero{
+
+        p.hero {
             color: rgba(33, 33, 33, 0.75);
             font-family: Poppins;
             font-size: 16px;
@@ -32,38 +34,43 @@
             font-weight: 400;
             line-height: 170%;
         }
-        button.hero{
+
+        button.hero {
             margin-top: 48px;
-            padding:12px 56px;
+            padding: 12px 56px;
             border: none;
             border-radius: 8px;
-            background-color:#206363;
+            background-color: #206363;
             color: #FFF;
             font-family: Poppins;
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
-            line-height: 170%; 
+            line-height: 170%;
         }
     }
-    img{
+
+    img {
         width: 100%;
     }
 }
 
 //features section
-#features{
+#features {
     background-color: #F7F7F7;
     padding: 55px 0;
-    .feat-row{
+
+    .feat-row {
         display: flex;
         justify-content: space-between;
-        align-items: center;  
-        .item{
+        align-items: center;
+
+        .item {
             display: flex;
-            align-items:center;
+            align-items: center;
         }
-        h2.item-header{
+
+        h2.item-header {
             margin-left: 8px;
             color: #000;
             font-family: Poppins;
@@ -120,14 +127,14 @@
             border: none;
             background: #F7F9FC;
             padding: 0px 10px;
+            border-radius: 8px;
             border-radius:8px;
         }
 
         svg {
             position: absolute;
-            right: 40px;
+            right: 8%;
             top: 12px;
-            border: 8px;
         }
     }
 
@@ -145,57 +152,68 @@
 }
 
 //swiper section
-#product-sliders{
+#product-sliders {
     padding: 83px 0 96px 0;
 }
-.swiper {
-  width: 100%;
-  height: 165;
-  margin: 20px auto;
-  .swiper-slide {
-    position: relative;
-    padding: 20px;
-    width: 264px !important;
-    height: 162px;
-    color: #000;
-    font-family: Poppins;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 170%;
-    background: #F5F5F5;
-    border-radius: 8px;
-  }
-  .swiper-slide img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 90%;
-    width: 40%;
-    object-fit: cover;
-  }
+
+#product-sliders {
+    .swiper {
+        width: 100%;
+        height: 165px;
+        margin: 20px auto;
+
+        .slider2 {
+            position: relative;
+            padding: 20px;
+            width: 264px !important;
+            height: 162px;
+            color: #000;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 170%;
+            background: #F5F5F5;
+            border-radius: 8px;
+        }
+
+        .slider2 img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 90%;
+            width: 40%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-button-next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        color: black;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 10;
+        border: 1px solid grey;
+    }
+
+    .swiper-button-next:after {
+        font-size: 18px !important;
+    }
 }
-.swiper-button-next {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px; 
-    height: 40px; 
-    background-color: white;
-    border-radius: 50%;
-    color: black;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 10;
-    border: 1px solid grey;
-  }
-  .swiper-button-next:after{
-    font-size: 18px !important;
-  }
+
+
+
+
 //   .append-buttons {
 //     text-align: center;
 //     margin-top: 50px;
@@ -212,107 +230,18 @@
 //     margin: 0 10px;
 //     font-size: 13px;
 //   }
+
 //featured
 #products {
-    margin-bottom: 96px;
-    h1 {
-        color: #000;
-        font-family: Rubik;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 170%;
-        margin-bottom: 32px;
-    }
+    @include products-style;
+}
 
-    .card {
+//best-seller
+#best-seller{
+    @include products-style;
+}
 
-        .imgbox {
-            display: flex;
-            justify-content: center;
-            position: relative;
-
-            .new {
-                position: absolute;
-                width: 79px;
-                height: 32px;
-                border-radius: 8px;
-                background: #43D167;
-                @include display-center;
-                top: 16px;
-                left: 16px;
-
-                span {
-                    color: #FFF;
-                    font-family: Poppins;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 170%;
-                }
-            }
-
-            svg {
-                position: absolute;
-                width: 22px;
-                height: 22px;
-                top: 16px;
-                right: 16px;
-            }
-        }
-
-        .card-body {
-            padding: 28px 24px;
-            .rate {
-                svg {
-                    margin-left: 6px;
-                }
-
-                svg:nth-child(1) {
-                    margin-left: 0
-                }
-            }
-
-            .card-title {
-                h3 {
-                    @include card-title;
-                    margin: 16px 0px;
-                }
-            }
-
-            .price {
-                display: flex;
-                align-items: center;
-                margin: 16px 0px;
-
-                h3 {
-                    color: #F75145;
-                    font-family: Poppins;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 170%;
-                    margin: 0;
-                }
-
-                span {
-                    color: rgba(54, 54, 54, 0.75);
-                    font-family: Poppins;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 170%;
-                    margin-left: 18px
-                }
-            }
-
-            .add-btn {
-                margin: 0 auto;
-
-                button {
-                    @include add-btn;
-                }
-            }
-        }
-    }
+//products
+#discount-products{
+    @include products-style;
 }

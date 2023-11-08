@@ -1,39 +1,121 @@
 /*phone respnsive*/
-@media (max-width: 640px){
-    .search-input{
+@media (max-width: 640px) {
+    #header{
+        .phone{
+            span{
+                font-size: 10px!important;
+            }
+        }
+        .info{
+            ul{
+                li{
+                    font-size: 10px!important;
+                    margin-left: 10px!important;
+                }
+            }
+        }
+    }
+    #nav {
+        .nav-item {
+            .main-item{
+                display: none!important;
+            }
+            .search {
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .search-input {
         display: none;
     }
-    #footer-links{
-        display: none !important;
+
+
+    //footer base
+    #footer{
+        #footer-links {
+            display: none !important;
+        }
+        .input-group{
+            display: none !important;
+        }
     }
-    #credential{
-        ul{
-            margin-top:10px;
-            justify-content:flex-start;
+
+
+    //footer credential part2
+    #credential {
+        ul {
+            margin-top: 10px;
+            justify-content: flex-start;
         }
     }
 }
 
 /* tablet responsive */
-@media only screen and (min-width:640px) and (max-width:768px){
-    #footer-links{
-        display: none !important;
+@media only screen and (min-width:640px) and (max-width:768px) {
+    #nav{
+        .main-item{
+            display: none!important;
+        }
+    }
+    .hamburger-menu{
+        display: block!important;
+    }
+    #footer{
+        #footer-links {
+            display: none !important;
+        }
+        .input-group{
+            display: none !important;
+        }
     }
 }
 
 /* desktop responsive */
-@media only screen and (min-width:768px) and (max-width:998px){
-
+@media only screen and (min-width:768px) and (max-width:998px) {
+    #nav {
+        .nav-item {
+            .search {
+                input {
+                    width: 330px;
+                }
+            }
+            .main-item {
+                .item {
+                    margin-left: 5px;
+    
+                    span {
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+    }
+    #footer{
+        #footer-links {
+            display: none !important;
+        }
+        .input-group{
+            display: none !important;
+        }
+    }
 }
 
 /*tv responsive*/
-@media only screen and (min-width:998px) and (max-width:1400px){
+@media only screen and (min-width:998px) and (max-width:1400px) {
+    #nav {
+        .main-item {
+            .item {
+                margin-left: 10px;
 
+                span {
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
 }
 
-@media only screen and (min-width:1440px){
-
-}
-
-
-
+@media only screen and (min-width:1440px) {}
