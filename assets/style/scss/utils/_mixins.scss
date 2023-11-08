@@ -53,7 +53,11 @@
     .slider {
         width: 360px!important;
         .card {
+            border-radius: 8px;
+            border:none;
             .imgbox {
+                border-radius: 8px;
+                overflow: hidden;
                 display: flex;
                 justify-content: center;
                 position: relative;

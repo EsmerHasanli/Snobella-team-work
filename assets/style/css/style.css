@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a {
@@ -22,9 +23,15 @@ footer {
   background-color: #F7F7F9;
 }
 footer .footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 39px 0 36px 0;
   border-bottom: 1px solid rgba(39, 49, 66, 0.15);
 }
@@ -46,16 +53,29 @@ footer .footer-top .search-input svg {
 
 footer .footer-body {
   padding-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between !important;
-  align-items: center;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #footer-links {
-  flex-direction: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-end;
+          flex-direction: flex-end;
   padding-top: 51px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 #footer-links h3 {
   margin-bottom: 20px;
@@ -120,9 +140,15 @@ footer .footer-body {
 #credential {
   padding: 22px 0;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #credential span {
   color: rgba(33, 33, 33, 0.75);
@@ -134,9 +160,15 @@ footer .footer-body {
   line-height: 170%;
 }
 #credential ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #credential ul li {
   margin-right: 32px;
@@ -151,11 +183,14 @@ footer .footer-body {
     font-size: 10px !important;
     margin-left: 10px !important;
   }
+  #header .info ul li span {
+    display: none;
+  }
   #nav .nav-item .main-item {
     display: none !important;
   }
-  #nav .nav-item .search input {
-    width: 100%;
+  #nav .nav-item .search {
+    display: none;
   }
   .search-input {
     display: none;
@@ -168,7 +203,9 @@ footer .footer-body {
   }
   #credential ul {
     margin-top: 10px;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 /* tablet responsive */
@@ -263,13 +300,23 @@ footer .footer-body {
   padding: 55px 0;
 }
 #features .feat-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #features .feat-row .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #features .feat-row h2.item-header {
   margin-left: 8px;
@@ -316,10 +363,12 @@ footer .footer-body {
 #nav .search input {
   width: 504px;
   height: 48px;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   border: none;
   background: #F7F9FC;
   padding: 0px 10px;
+  border-radius: 8px;
   border-radius: 8px;
 }
 #nav .search svg {
@@ -328,7 +377,9 @@ footer .footer-body {
   top: 12px;
 }
 #nav .main-item {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 #nav .item {
   margin-left: 26px;
@@ -366,22 +417,30 @@ footer .footer-body {
   right: 0;
   height: 90%;
   width: 40%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #product-sliders .swiper-button-next {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 40px;
   height: 40px;
   background-color: white;
   border-radius: 50%;
   color: black;
   font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   z-index: 10;
   border: 1px solid grey;
@@ -392,6 +451,9 @@ footer .footer-body {
 
 #products {
   margin-bottom: 96px;
+}
+#products .card {
+  background-color: #F9F9F9;
 }
 #products h1 {
   color: #000;
@@ -405,13 +467,24 @@ footer .footer-body {
 #products .slider {
   width: 360px !important;
 }
+#products .slider .card {
+  border-radius: 8px;
+  border: none;
+}
 #products .slider .card .imgbox {
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 #products .slider .card .imgbox img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 218px;
   height: 243px;
 }
@@ -421,9 +494,15 @@ footer .footer-body {
   height: 32px;
   border-radius: 8px;
   background: #43D167;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 16px;
   left: 16px;
 }
@@ -461,8 +540,12 @@ footer .footer-body {
   margin: 16px 0px;
 }
 #products .slider .card .card-body .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 16px 0px;
 }
 #products .slider .card .card-body .price h3 {
@@ -494,6 +577,8 @@ footer .footer-body {
 }
 
 #best-seller {
+  padding: 72px 0;
+  background-color: #FFF7F7;
   margin-bottom: 96px;
 }
 #best-seller h1 {
@@ -508,13 +593,24 @@ footer .footer-body {
 #best-seller .slider {
   width: 360px !important;
 }
+#best-seller .slider .card {
+  border-radius: 8px;
+  border: none;
+}
 #best-seller .slider .card .imgbox {
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 #best-seller .slider .card .imgbox img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 218px;
   height: 243px;
 }
@@ -524,9 +620,15 @@ footer .footer-body {
   height: 32px;
   border-radius: 8px;
   background: #43D167;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 16px;
   left: 16px;
 }
@@ -564,8 +666,12 @@ footer .footer-body {
   margin: 16px 0px;
 }
 #best-seller .slider .card .card-body .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 16px 0px;
 }
 #best-seller .slider .card .card-body .price h3 {
@@ -599,6 +705,9 @@ footer .footer-body {
 #discount-products {
   margin-bottom: 96px;
 }
+#discount-products .card {
+  background-color: #F9F9F9;
+}
 #discount-products h1 {
   color: #000;
   font-family: Rubik;
@@ -611,13 +720,24 @@ footer .footer-body {
 #discount-products .slider {
   width: 360px !important;
 }
+#discount-products .slider .card {
+  border-radius: 8px;
+  border: none;
+}
 #discount-products .slider .card .imgbox {
+  border-radius: 8px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 #discount-products .slider .card .imgbox img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 218px;
   height: 243px;
 }
@@ -627,9 +747,15 @@ footer .footer-body {
   height: 32px;
   border-radius: 8px;
   background: #43D167;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 16px;
   left: 16px;
 }
@@ -667,8 +793,12 @@ footer .footer-body {
   margin: 16px 0px;
 }
 #discount-products .slider .card .card-body .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 16px 0px;
 }
 #discount-products .slider .card .card-body .price h3 {
@@ -697,4 +827,29 @@ footer .footer-body {
   height: 48px;
   border-radius: 8px;
   border: 1px solid #212121;
+}
+
+.product-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 32px;
+}
+.product-title h1 {
+  margin-bottom: 0 !important;
+}
+.product-title a {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
 }/*# sourceMappingURL=style.css.map */
