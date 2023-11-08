@@ -199,7 +199,7 @@ footer .footer-body {
 /*tv responsive*/
 #hero {
   background-color: #FFE2E0;
-  padding: 99px 0 47px 0;
+  padding: 25px 0;
 }
 #hero .hero-section-preview span.hero {
   color: #DF4244;
@@ -315,10 +315,11 @@ footer .footer-body {
   border: none;
   background: #F7F9FC;
   padding: 0px 10px;
+  border-radius: 8px;
 }
 #nav .search svg {
   position: absolute;
-  right: 3px;
+  right: 40px;
   top: 12px;
   border: 8px;
 }
@@ -407,6 +408,7 @@ footer .footer-body {
   font-style: normal;
   font-weight: 500;
   line-height: 170%;
+  margin-bottom: 32px;
 }
 #products .card .imgbox {
   display: -webkit-box;
