@@ -1,0 +1,370 @@
+#breadcrumb-links{
+    padding: 32px 0 6px 0;
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            margin-right: 7px;
+            a{
+                color: #1D1D1D;
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 170%; 
+            }
+        }
+        li.active{
+            color: rgba(29, 29, 29, 0.75);
+            font-family: Poppins;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%; 
+        }
+    }
+
+}
+
+main{
+    h1{
+        color: #212121;
+        font-family: Rubik;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 170%; /* 68px */
+    }
+    .dropdown{
+        padding: 16px 38px 24px 40px;
+        border-radius: 8px;
+        border: 1px solid #D0D0D0;
+        .dropdown-header{
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            h2{
+                color: #212121;
+                font-family: Rubik;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 170%; 
+                margin-bottom: 0px;
+            }
+        }
+        .dropdown-body{
+            ul{
+                li{
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+#heading{
+    padding-bottom: 30px;
+    .header{
+        span{
+            margin-right:17px;
+            color: rgba(33, 33, 33, 0.90);
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%; 
+        }
+        button{
+            padding:6px 13px 7px 19px;
+            border-radius: 8px;
+            border: 1px solid #D0D0D0;
+            background-color:transparent;
+            color: rgba(33, 33, 33, 0.90);
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%; 
+            text-align: center;
+        }
+    }
+}
+
+.products-options{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 128px;
+}
+
+#material{
+    margin-top: 24px;
+ .dropdown-body{
+    form{
+        div{
+         margin-top:16px;
+         input{
+            margin-right:14px;
+            border-radius: 3px;
+         }
+         label{
+            color: rgba(33, 33, 33, 0.90);
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%; 
+         }
+       }
+    }
+ }
+}
+
+#price{
+    margin-top: 24px;
+   .dropdown-body{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    p{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        color: rgba(33, 33, 33, 0.75);
+        font-family: Rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 170%; 
+        width: 72px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid #C8C8C8;
+        margin-bottom: 0;
+    }
+    p:last-of-type{
+        margin-right: 15px;
+    }
+    span{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 10px;
+        height: 40px;
+        text-align: center;
+        margin:0 6px;
+    }
+    article{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        width: 51px;
+        height: 40px;
+        border-radius: 8px;
+        background-color:#EF544F;
+    }
+   }
+}
+
+
+#size{
+    margin-top: 24px;
+    .dropdown-body{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    p{
+        text-transform: uppercase;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        color: rgba(33, 33, 33, 0.75);
+        font-family: Rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 170%; 
+        width: 72px;
+        height: 40px;
+        border-radius: 8px;
+        border: 1px solid #C8C8C8;
+        margin-bottom: 0;
+    }
+    p:nth-of-type(2){
+        margin:0px 14px;
+    }
+}
+
+#color{
+    padding: 16px 21px 24px 40px;
+    margin-top: 24px;
+    .dropdown-body{
+        display: flex;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            margin-right:17px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50px;
+        }
+        li:first-of-type{
+            background-color:#275240;
+        }
+        li:nth-of-type(2){
+            background-color:#0085FF;
+        }
+        li:nth-of-type(3){
+            background-color:#3D2A33;
+        }
+        li:nth-of-type(4){
+            background-color:#773838;
+        }
+        li:nth-of-type(5){
+            background-color:#000;
+        }
+        li:nth-of-type(6){
+            background-color:#307E46;
+        }
+        li:nth-of-type(7){
+            background-color:#0085FF;
+        }
+        li:nth-of-type(8){
+            background-color:#FF6B00;
+        }
+        li:nth-of-type(9){
+            background-color:#D6B73B;
+        }
+        li:nth-of-type(10){
+            background-color:#7C4DFF;
+        }
+        li:nth-of-type(11){
+            background-color:#F75145;
+        }
+        li:nth-of-type(12){
+            background-color:#842759;
+        }
+        li:nth-of-type(13){
+            background-color:#895C31;
+        }
+        li:hover{
+            scale:1.1;
+            border:1px solid black;
+        }
+    }
+}
+
+
+#product-cards{
+    margin-left: 58px;
+}
+
+.cards-wrapper{
+    display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+    .card {
+        border-radius: 8px;
+        border:none;
+        .imgbox {
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            img {
+                object-fit: cover;
+                width: 218px;
+                height: 243px;
+            }
+
+            .new {
+                position: absolute;
+                width: 79px;
+                height: 32px;
+                border-radius: 8px;
+                background: #43D167;
+                @include display-center;
+                top: 16px;
+                left: 16px;
+
+                span {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 170%;
+                }
+            }
+
+            svg {
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                top: 16px;
+                right: 16px;
+            }
+        }
+
+        .card-body {
+            padding: 28px 24px;
+
+            .rate {
+                svg {
+                    margin-left: 6px;
+                }
+
+                svg:nth-child(1) {
+                    margin-left: 0
+                }
+            }
+
+            .card-title {
+                h3 {
+                    @include card-title;
+                    margin: 16px 0px;
+                }
+            }
+
+            .price {
+                display: flex;
+                align-items: center;
+                margin: 16px 0px;
+
+                h3 {
+                    color: #F75145;
+                    font-family: Poppins;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 170%;
+                    margin: 0;
+                }
+
+                span {
+                    color: rgba(54, 54, 54, 0.75);
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 170%;
+                    margin-left: 18px
+                }
+            }
+
+            .add-btn {
+                margin: 0 auto;
+
+                button {
+                    @include add-btn;
+                }
+            }
+        }
+    }
+}
