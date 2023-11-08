@@ -1,3 +1,5 @@
+@import './utils/mixins';
+@import './utils/variables';
 @import './base/reset';
 @import './base/typografy';
 @import './components/buttons';
@@ -5,5 +7,3 @@
 @import './layout/header';
 @import './layout/responsive';
 @import './pages/home';
-@import './utils/mixins';
-@import './utils/variables';

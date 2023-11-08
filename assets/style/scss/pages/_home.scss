@@ -1,0 +1,173 @@
+// @import url("/assets/style/scss/utils/_mixins.scss");
+
+
+//header
+#header {
+    background: #007878;
+    padding: 12px 0px;
+
+    .phone {
+        svg {
+            margin-right: 12px;
+        }
+
+        span {
+            line-height: 170%;
+            @include li-header-style;
+        }
+    }
+
+    .info {
+        ul {
+            li {
+                @include li-header-style;
+                margin-left: 18px;
+
+                span {
+                    color: #FFFFFFBF;
+                    margin-left: 18px;
+                }
+            }
+        }
+    }
+}
+
+
+//nav
+#nav {
+    .search {
+        position: relative;
+
+        input {
+            width: 504px;
+            height: 48px;
+            flex-shrink: 0;
+            border: none;
+            background: #F7F9FC;
+            padding: 0px 10px;
+        }
+
+        svg {
+            position: absolute;
+            right: 3px;
+            top: 12px;
+            border: 8px;
+        }
+    }
+
+    .main-item {
+        justify-content: space-between;
+    }
+
+    .item {
+        margin-left: 26px;
+
+        span {
+            margin-left: 8px;
+        }
+    }
+}
+
+//featured
+#products {
+    margin-bottom: 96px;
+    h1 {
+        color: #000;
+        font-family: Rubik;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 170%;
+    }
+
+    .card {
+
+        .imgbox {
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            .new {
+                position: absolute;
+                width: 79px;
+                height: 32px;
+                border-radius: 8px;
+                background: #43D167;
+                @include display-center;
+                top: 16px;
+                left: 16px;
+
+                span {
+                    color: #FFF;
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 170%;
+                }
+            }
+
+            svg {
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                top: 16px;
+                right: 16px;
+            }
+        }
+
+        .card-body {
+            padding: 28px 24px;
+            .rate {
+                svg {
+                    margin-left: 6px;
+                }
+
+                svg:nth-child(1) {
+                    margin-left: 0
+                }
+            }
+
+            .card-title {
+                h3 {
+                    @include card-title;
+                    margin: 16px 0px;
+                }
+            }
+
+            .price {
+                display: flex;
+                align-items: center;
+                margin: 16px 0px;
+
+                h3 {
+                    color: #F75145;
+                    font-family: Poppins;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 170%;
+                    margin: 0;
+                }
+
+                span {
+                    color: rgba(54, 54, 54, 0.75);
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 170%;
+                    margin-left: 18px
+                }
+            }
+
+            .add-btn {
+                margin: 0 auto;
+
+                button {
+                    @include add-btn;
+                }
+            }
+        }
+    }
+}

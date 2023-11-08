@@ -1,9 +1,12 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- toaster css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- lightbox css -->
@@ -11,32 +14,1047 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- main css -->
     <link rel="stylesheet" href="./assets/style/css/style.css">
     <title>Home</title>
 </head>
+
 <body>
 
     <!-- header -->
+    <header id="header">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-4">
+                    <div class="phone">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_1_1278)">
+                                <path
+                                    d="M0.761715 3.41154C0.761715 2.75291 1.00753 2.11172 1.45399 1.62228C1.95304 1.07503 2.66427 0.76123 3.40475 0.76123L6.9532 0.76123C8.29985 0.76123 9.42869 1.7662 9.57879 3.09885C9.66723 3.88313 9.82873 4.66206 10.0588 5.41435C10.3467 6.35588 10.0968 7.37006 9.40631 8.06069L7.96861 9.49852C9.47511 12.2521 11.7713 14.5483 14.5243 16.0546L15.9621 14.6166C16.6528 13.9262 17.6669 13.6762 18.6086 13.9643C19.3609 14.1944 20.1398 14.3559 20.924 14.4443C22.2567 14.5943 23.2617 15.7231 23.2617 17.0698L23.2617 20.6181C23.2617 21.3587 22.9479 22.0699 22.4007 22.569C21.8513 23.0702 21.1107 23.3184 20.369 23.2501C17.8229 23.0158 15.3646 22.341 13.0621 21.2443C10.8237 20.1782 8.7967 18.7456 7.0371 16.986C5.27764 15.2265 3.84475 13.1994 2.7788 10.9609C1.68223 8.65834 1.00726 6.20001 0.772838 3.65393C0.765283 3.57304 0.761715 3.49229 0.761715 3.41154ZM8.41823 6.19672C8.41823 6.10773 8.4049 6.01723 8.37785 5.92865C8.1161 5.07309 7.93249 4.18732 7.83197 3.29564C7.78212 2.85303 7.40432 2.51904 6.9532 2.51904L3.40475 2.51904C3.15344 2.51904 2.9219 2.62135 2.75271 2.80702C2.58119 2.99475 2.49975 3.23837 2.52337 3.49271C3.40269 13.0471 10.976 20.6203 20.5302 21.4997C20.7846 21.5232 21.0282 21.4416 21.2161 21.2704C21.4016 21.1009 21.5039 20.8694 21.5039 20.6181L21.5039 17.0698C21.5039 16.6186 21.1701 16.2408 20.7273 16.1908C19.8356 16.0905 18.9499 15.9068 18.0943 15.6452C17.7757 15.5477 17.435 15.6297 17.2051 15.8596L14.864 18.2007L14.2981 17.9191C10.77 16.1638 7.85998 13.2534 6.10423 9.72456L5.82243 9.15863L8.16348 6.81772C8.32924 6.65196 8.41823 6.42839 8.41823 6.19672Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_1278">
+                                    <rect width="24" height="24" fill="white" transform="translate(24) rotate(90)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span>
+                            +748 383 23 14
+                        </span>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="info align-items-center">
+                        <ul class="d-flex justify-content-end ">
+                            <li>
+                                Terms of Use
+                                <span>|</span>
+                            </li>
+                            <li>
+                                FAQ
+                                <span>|</span>
+                            </li>
+                            <li>
+                                Customer services
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <!-- nav -->
+    <nav id="nav">
+        <div class="container">
+            <div class="row align-items-center justify-content-center mt-3">
+                <div class="col-xl-2">
+                    <h1>Snobella</h1>
+                </div>
+                <div class="col-xl-10 d-flex align-items-center justify-content-center">
+                    <div class="col-xl-7">
+                        <div class="search">
+                            <input type="text" placeholder="Search all product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <g clip-path="url(#clip0_1_1261)">
+                                    <path
+                                        d="M23.2327 21.8602L17.5207 15.9194C18.9894 14.1735 19.794 11.9768 19.794 9.68999C19.794 4.34701 15.447 0 10.1041 0C4.76108 0 0.414062 4.34701 0.414062 9.68999C0.414062 15.033 4.76108 19.38 10.1041 19.38C12.1099 19.38 14.0213 18.775 15.6556 17.6265L21.411 23.6124C21.6516 23.8622 21.9751 24 22.3219 24C22.6501 24 22.9614 23.8749 23.1978 23.6474C23.7 23.1641 23.716 22.3628 23.2327 21.8602ZM10.1041 2.52782C14.0534 2.52782 17.2662 5.74069 17.2662 9.68999C17.2662 13.6393 14.0534 16.8522 10.1041 16.8522C6.15475 16.8522 2.94189 13.6393 2.94189 9.68999C2.94189 5.74069 6.15475 2.52782 10.1041 2.52782Z"
+                                        fill="#273142" fill-opacity="0.75" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1261">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="main-item item d-flex">
+                            <div class="sign-up item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M15.6186 11.1284C17.1543 10.0084 18.1544 8.19581 18.1544 6.15384C18.1544 2.76061 15.3937 0 12.0005 0C8.60727 0 5.84666 2.76061 5.84666 6.15384C5.84666 8.19581 6.84665 10.0084 8.38237 11.1284C4.56487 12.5892 1.84668 16.2905 1.84668 20.6154C1.84668 22.4817 3.36501 24 5.23129 24H18.7697C20.636 24 22.1543 22.4817 22.1543 20.6154C22.1543 16.2905 19.4361 12.5892 15.6186 11.1284ZM7.69284 6.15384C7.69284 3.77859 9.62526 1.84617 12.0005 1.84617C14.3758 1.84617 16.3082 3.77859 16.3082 6.15384C16.3082 8.52909 14.3758 10.4616 12.0005 10.4616C9.62526 10.4616 7.69284 8.52909 7.69284 6.15384ZM18.7697 22.1538H5.23129C4.38299 22.1538 3.69285 21.4637 3.69285 20.6153C3.69285 16.0344 7.4196 12.3076 12.0006 12.3076C16.5815 12.3076 20.3083 16.0344 20.3083 20.6153C20.3082 21.4637 19.6181 22.1538 18.7697 22.1538Z"
+                                        fill="#273142" fill-opacity="0.9" />
+                                </svg>
+                                <span>Sign up</span>
+                            </div>
+                            <div class="wishlist  item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1252)">
+                                        <path
+                                            d="M22.0718 3.96971C19.4616 1.36022 15.2154 1.36022 12.6059 3.96971L11.9998 4.57546L11.394 3.96971C8.78456 1.35987 4.53796 1.35987 1.92847 3.96971C-0.628033 6.52621 -0.644634 10.5785 1.88997 13.3961C4.20171 15.9649 11.0196 21.5149 11.3089 21.7498C11.5053 21.9094 11.7416 21.9871 11.9765 21.9871C11.9843 21.9871 11.992 21.9871 11.9994 21.9868C12.2424 21.9981 12.4872 21.9147 12.69 21.7498C12.9792 21.5149 19.7979 15.9649 22.1103 13.3957C24.6446 10.5785 24.628 6.52621 22.0718 3.96971ZM20.535 11.9783C18.7326 13.9806 13.7782 18.1103 11.9994 19.5758C10.2207 18.1107 5.26733 13.9813 3.46527 11.9787C1.69712 10.0134 1.68052 7.21461 3.42677 5.46836C4.31862 4.57687 5.48985 4.13077 6.66108 4.13077C7.83231 4.13077 9.00355 4.57652 9.89539 5.46836L11.2277 6.80066C11.3863 6.95925 11.5862 7.0539 11.796 7.08711C12.1365 7.16022 12.5059 7.06521 12.7708 6.80101L14.1038 5.46836C15.8879 3.68502 18.7898 3.68538 20.5728 5.46836C22.3191 7.21461 22.3025 10.0134 20.535 11.9783Z"
+                                            fill="#273142" fill-opacity="0.9" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1252">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <span>Wishlist</span>
+                            </div>
+                            <div class="basket  item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M19.6667 6.33337H5C3.89543 6.33337 3 7.2288 3 8.33337V20.3334C3 21.4379 3.89543 22.3334 5 22.3334H19.6667C20.7712 22.3334 21.6667 21.4379 21.6667 20.3334V8.33337C21.6667 7.2288 20.7712 6.33337 19.6667 6.33337Z"
+                                        stroke="#3D4655" stroke-width="2" stroke-linecap="square" />
+                                    <path
+                                        d="M7 9V6.33333C7 4.91885 7.5619 3.56229 8.5621 2.5621C9.56229 1.5619 10.9188 1 12.3333 1C13.7478 1 15.1044 1.5619 16.1046 2.5621C17.1048 3.56229 17.6667 4.91885 17.6667 6.33333V9"
+                                        stroke="#3D4655" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                                <span>Basket</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <!-- hero section -->
     <!-- featured products -->
+    <section id="products">
+        <div class="container">
+            <div class="row">
+                <h1>Featured Products</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- bestseller -->
+    <section id="products">
+        <div class="container">
+            <div class="row">
+                <h1>Bestseller</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- discount products -->
+    <section id="products">
+        <div class="container">
+            <div class="row">
+                <h1>Discount Products</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="imgbox">
+                            <img src="./assets/media/image/bag1.png" alt="">
+                            <div class="new">
+                                <span>New</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div class="card-body">
+                            <div class="rate">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_1_1345)">
+                                        <path
+                                            d="M7.00033 9.68833L4.47666 11.0834L4.95866 8.12863L2.91699 6.0361L5.73871 5.605L7.00033 2.91669L8.26194 5.605L11.0837 6.0361L9.04199 8.12863L9.52399 11.0834L7.00033 9.68833Z"
+                                            fill="#FFDD45" stroke="#FFDD45" stroke-width="3" stroke-linecap="square" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_1_1345">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="card-title">
+                                <h3>Shoulder Bag Leather Bag Leather
+                                    undertakes laborious physical physical </h3>
+                            </div>
+                            <div class="price">
+                                <h3>$130.00</h3>
+                                <span>From $340.00</span>
+                            </div>
+                            <div class="add-btn">
+                                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- footer -->
 
 
     <!-- JQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- axios cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js" integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"
+        integrity="sha512-WrdC3CE9vf1nBf58JHepuWT4x24uTacky9fuzw2g/3L9JkihgwZ6Cfv+JGTtNyosOhEmttMtEZ6H3qJWfI7gIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- toaster js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- darkmode -->
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <!-- sweetalert -->
@@ -48,4 +1066,5 @@
     <!-- main script -->
     <script type="module" src="./assets/script/main.js"></script>
 </body>
+
 </html>
