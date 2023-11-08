@@ -183,11 +183,14 @@ footer .footer-body {
     font-size: 10px !important;
     margin-left: 10px !important;
   }
+  #header .info ul li span {
+    display: none;
+  }
   #nav .nav-item .main-item {
     display: none !important;
   }
-  #nav .nav-item .search input {
-    width: 100%;
+  #nav .nav-item .search {
+    display: none;
   }
   .search-input {
     display: none;
@@ -449,6 +452,9 @@ footer .footer-body {
 #products {
   margin-bottom: 96px;
 }
+#products .card {
+  background-color: #F9F9F9;
+}
 #products h1 {
   color: #000;
   font-family: Rubik;
@@ -461,7 +467,13 @@ footer .footer-body {
 #products .slider {
   width: 360px !important;
 }
+#products .slider .card {
+  border-radius: 8px;
+  border: none;
+}
 #products .slider .card .imgbox {
+  border-radius: 8px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,6 +577,8 @@ footer .footer-body {
 }
 
 #best-seller {
+  padding: 72px 0;
+  background-color: #FFF7F7;
   margin-bottom: 96px;
 }
 #best-seller h1 {
@@ -579,7 +593,13 @@ footer .footer-body {
 #best-seller .slider {
   width: 360px !important;
 }
+#best-seller .slider .card {
+  border-radius: 8px;
+  border: none;
+}
 #best-seller .slider .card .imgbox {
+  border-radius: 8px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,6 +705,9 @@ footer .footer-body {
 #discount-products {
   margin-bottom: 96px;
 }
+#discount-products .card {
+  background-color: #F9F9F9;
+}
 #discount-products h1 {
   color: #000;
   font-family: Rubik;
@@ -697,7 +720,13 @@ footer .footer-body {
 #discount-products .slider {
   width: 360px !important;
 }
+#discount-products .slider .card {
+  border-radius: 8px;
+  border: none;
+}
 #discount-products .slider .card .imgbox {
+  border-radius: 8px;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -798,4 +827,29 @@ footer .footer-body {
   height: 48px;
   border-radius: 8px;
   border: 1px solid #212121;
+}
+
+.product-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 32px;
+}
+.product-title h1 {
+  margin-bottom: 0 !important;
+}
+.product-title a {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
 }/*# sourceMappingURL=style.css.map */
