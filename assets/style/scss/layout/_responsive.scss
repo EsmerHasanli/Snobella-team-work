@@ -1,11 +1,24 @@
 /*phone respnsive*/
 @media (max-width: 640px){
-
+    .search-input{
+        display: none;
+    }
+    #footer-links{
+        display: none !important;
+    }
+    #credential{
+        ul{
+            margin-top:10px;
+            justify-content:flex-start;
+        }
+    }
 }
 
 /* tablet responsive */
 @media only screen and (min-width:640px) and (max-width:768px){
-
+    #footer-links{
+        display: none !important;
+    }
 }
 
 /* desktop responsive */
