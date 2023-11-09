@@ -160,13 +160,13 @@
         <div class="container">
             <div class="row">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M6.66699 4L10.667 8L6.66699 12" stroke="#2B2B2B" stroke-width="2" stroke-linecap="square"/>
                         </svg>
                     </li>
-                    <li class="active">Shoulder Bags</li>
+                    <li class="active">All Products</li>
                   </ul>
             </div>
         </div>
@@ -179,7 +179,7 @@
                 <div id="heading" class="d-flex justify-content-between">
                     <h1>Shoulder bags</h1>
                     <div class="header">
-                        <span>320 result</span>
+                        <span id="productsCount"></span>
                         <button type="button">
                             Featured
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -200,12 +200,12 @@
                                 </div>
                                 <div class="dropdown-body">
                                     <ul>
-                                        <li>Backpacks</li>
-                                        <li>Belt Bags</li>
-                                        <li>Handbags</li>
-                                        <li>Shoulder bags</li>
-                                        <li>Evening bags</li>
-                                        <li>Postman bag</li>
+                                        <li class="productCategory" data-category="backpacks">Backpacks</li>
+                                        <li class="productCategory" data-category="beltbags">Belt Bags</li>
+                                        <li class="productCategory" data-category="handbags">Handbags</li>
+                                        <li class="productCategory" data-category="shoulderbags">Shoulder bags</li>
+                                        <li class="productCategory" data-category="eveninigbags">Evening bags</li>
+                                        <li class="productCategory" data-category="postmanbags">Postman bag</li>
                                     </ul>
                                 </div>
                             </div>
@@ -220,27 +220,27 @@
                                 <div class="dropdown-body">
                                     <form>
                                         <div>
-                                            <input type="checkbox" id="cloth" name="cloth" value="cloth">
+                                            <input disabled type="checkbox" id="cloth" name="cloth" value="cloth">
                                             <label for="cloth"> Cloth </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" id="cotton" name="cotton" value="cotton">
+                                            <input disabled type="checkbox" id="cotton" name="cotton" value="cotton">
                                             <label for="cotton"> Cotton </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" id="denim" name="denim" value="denim">
+                                            <input disabled type="checkbox" id="denim" name="denim" value="denim">
                                             <label for="denim"> Denim - Jeans </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" id="leathers" name="leathers" value="leathers">
+                                            <input disabled type="checkbox" id="leathers" name="leathers" value="leathers">
                                             <label for="leathers"> Exotic Leathers </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" id="fauxfur" name="fauxfur" value="fauxfur">
+                                            <input disabled type="checkbox" id="fauxfur" name="fauxfur" value="fauxfur">
                                             <label for="fauxfur"> Faux Fur </label>
                                         </div>
                                         <div>
-                                            <input type="checkbox" id="glitter" name="glitter" value="glitter">
+                                            <input disabled type="checkbox" id="glitter" name="glitter" value="glitter">
                                             <label for="glitter"> Glitter </label>
                                         </div>
                                       </form>
@@ -255,11 +255,11 @@
                                     </svg>
                                 </div>
                                 <div class="dropdown-body">
-                                   <p>$10</p> 
+                                   <p> <input id="min-price-input" class="price-input" type="text"> </p> 
                                    <span>-</span>
-                                   <p>$50</p>
+                                   <p> <input id="max-price-input" class="price-input" type="text"> </p>
 
-                                    <article>
+                                    <article id="search-button">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <g clip-path="url(#clip0_1_276)">
                                               <path d="M19.3608 18.2168L14.6007 13.2662C15.8246 11.8113 16.4952 9.98069 16.4952 8.07499C16.4952 3.62251 12.8727 0 8.42021 0C3.96773 0 0.345215 3.62251 0.345215 8.07499C0.345215 12.5275 3.96773 16.15 8.42021 16.15C10.0917 16.15 11.6846 15.6458 13.0465 14.6888L17.8427 19.677C18.0431 19.8852 18.3128 20 18.6017 20C18.8752 20 19.1347 19.8957 19.3316 19.7061C19.7501 19.3034 19.7635 18.6357 19.3608 18.2168ZM8.42021 2.10652C11.7113 2.10652 14.3887 4.78391 14.3887 8.07499C14.3887 11.3661 11.7113 14.0435 8.42021 14.0435C5.12912 14.0435 2.45173 11.3661 2.45173 8.07499C2.45173 4.78391 5.12912 2.10652 8.42021 2.10652Z" fill="white"/>
@@ -282,9 +282,9 @@
                                     </svg>
                                 </div>
                                 <div class="dropdown-body">
-                                   <p>xs</p> 
-                                   <p>s</p>
-                                   <p>m</p>
+                                   <p class="productSize" data-size="xs">xs</p> 
+                                   <p class="productSize" data-size="s">s</p>
+                                   <p class="productSize" data-size="m">m</p>
                                 </div>
                             </div>         
                             <!-- color -->
@@ -297,36 +297,31 @@
                                 </div>
                                 <div class="dropdown-body">
                                     <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
+                                        <li class="productColor" data-color="darkgreen"></li>
+                                        <li class="productColor" data-color="lightblue"></li>
+                                        <li class="productColor" data-color="darkpurple"></li>
+                                        <li class="productColor" data-color="sanguine"></li>
+                                        <li class="productColor" data-color="black"></li>
+                                        <li class="productColor" data-color="green"></li>
+                                        <li class="productColor" data-color="blue"></li>
+                                        <li class="productColor" data-color="orange"></li>
+                                        <li class="productColor" data-color="yellow"></li>
+                                        <li class="productColor" data-color="lightviolet"></li>
+                                        <li class="productColor" data-color="pink"></li>
+                                        <li class="productColor" data-color="purple"></li>
+                                        <li class="productColor" data-color="lightbrown"></li>
                                     </ul>
                                 </div>
                             </div>    
                         </aside>
                         <section id="product-cards" class="col-9">
-                            <!-- <div class="header">
-                                <span>320 result</span>
-                                <button type="button">
-                                    Featured
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                        <path d="M21 11.6666L14 18.6666L7 11.6666" stroke="#212121" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
-                                      </svg>
-                                </button> 
-                            </div> -->
-
                             <div class="cards-wrapper">
-    
+                                <!-- loader -->
+                                <div id="loader" class="spinner-border text-secondary m-auto" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <!-- cards -->
+
                             </div>
                         </section>
                     </div>

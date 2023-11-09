@@ -959,6 +959,10 @@ main .dropdown .dropdown-body ul li {
   margin-bottom: 128px;
 }
 
+#categories .productCategory:hover {
+  cursor: pointer;
+}
+
 #material {
   margin-top: 24px;
 }
@@ -1047,6 +1051,17 @@ main .dropdown .dropdown-body ul li {
   border-radius: 8px;
   background-color: #EF544F;
 }
+#price .price-input {
+  color: rgba(33, 33, 33, 0.75);
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  width: 50px;
+  height: 30px;
+  border: none;
+}
 
 #size {
   margin-top: 24px;
@@ -1088,6 +1103,9 @@ main .dropdown .dropdown-body ul li {
 #size p:nth-of-type(2) {
   margin: 0px 14px;
 }
+#size p:hover {
+  cursor: pointer;
+}
 
 #color {
   padding: 16px 21px 24px 40px;
@@ -1104,6 +1122,8 @@ main .dropdown .dropdown-body ul li {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 #color ul li {
   margin-right: 17px;
@@ -1153,13 +1173,13 @@ main .dropdown .dropdown-body ul li {
 #color ul li:hover {
   scale: 1.1;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 #product-cards {
   margin-left: 58px;
 }
-
-.cards-wrapper {
+#product-cards .cards-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1169,11 +1189,15 @@ main .dropdown .dropdown-body ul li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.cards-wrapper .card {
+#product-cards .cards-wrapper .card {
+  margin-bottom: 48px;
+  width: 360px;
+  height: 508px;
+  background-color: #F9F9F9;
   border-radius: 8px;
   border: none;
 }
-.cards-wrapper .card .imgbox {
+#product-cards .cards-wrapper .card .imgbox {
   border-radius: 8px;
   overflow: hidden;
   display: -webkit-box;
@@ -1184,13 +1208,13 @@ main .dropdown .dropdown-body ul li {
           justify-content: center;
   position: relative;
 }
-.cards-wrapper .card .imgbox img {
+#product-cards .cards-wrapper .card .imgbox img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 218px;
   height: 243px;
 }
-.cards-wrapper .card .imgbox .new {
+#product-cards .cards-wrapper .card .imgbox .new {
   position: absolute;
   width: 79px;
   height: 32px;
@@ -1208,7 +1232,7 @@ main .dropdown .dropdown-body ul li {
   top: 16px;
   left: 16px;
 }
-.cards-wrapper .card .imgbox .new span {
+#product-cards .cards-wrapper .card .imgbox .new span {
   color: #FFF;
   font-family: Poppins;
   font-size: 16px;
@@ -1216,23 +1240,23 @@ main .dropdown .dropdown-body ul li {
   font-weight: 500;
   line-height: 170%;
 }
-.cards-wrapper .card .imgbox svg {
+#product-cards .cards-wrapper .card .imgbox svg {
   position: absolute;
   width: 22px;
   height: 22px;
   top: 16px;
   right: 16px;
 }
-.cards-wrapper .card .card-body {
+#product-cards .cards-wrapper .card .card-body {
   padding: 28px 24px;
 }
-.cards-wrapper .card .card-body .rate svg {
+#product-cards .cards-wrapper .card .card-body .rate svg {
   margin-left: 6px;
 }
-.cards-wrapper .card .card-body .rate svg:nth-child(1) {
+#product-cards .cards-wrapper .card .card-body .rate svg:nth-child(1) {
   margin-left: 0;
 }
-.cards-wrapper .card .card-body .card-title h3 {
+#product-cards .cards-wrapper .card .card-body .card-title h3 {
   color: #000;
   font-family: Rubik;
   font-size: 16px;
@@ -1241,7 +1265,7 @@ main .dropdown .dropdown-body ul li {
   line-height: 170%;
   margin: 16px 0px;
 }
-.cards-wrapper .card .card-body .price {
+#product-cards .cards-wrapper .card .card-body .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1250,7 +1274,7 @@ main .dropdown .dropdown-body ul li {
           align-items: center;
   margin: 16px 0px;
 }
-.cards-wrapper .card .card-body .price h3 {
+#product-cards .cards-wrapper .card .card-body .price h3 {
   color: #F75145;
   font-family: Poppins;
   font-size: 20px;
@@ -1259,7 +1283,7 @@ main .dropdown .dropdown-body ul li {
   line-height: 170%;
   margin: 0;
 }
-.cards-wrapper .card .card-body .price span {
+#product-cards .cards-wrapper .card .card-body .price span {
   color: rgba(54, 54, 54, 0.75);
   font-family: Poppins;
   font-size: 16px;
@@ -1268,10 +1292,10 @@ main .dropdown .dropdown-body ul li {
   line-height: 170%;
   margin-left: 18px;
 }
-.cards-wrapper .card .card-body .add-btn {
+#product-cards .cards-wrapper .card .card-body .add-btn {
   margin: 0 auto;
 }
-.cards-wrapper .card .card-body .add-btn button {
+#product-cards .cards-wrapper .card .card-body .add-btn button {
   width: 100%;
   height: 48px;
   border-radius: 8px;
