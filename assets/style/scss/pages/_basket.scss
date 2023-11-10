@@ -1,0 +1,179 @@
+#basket {
+    padding: 48px 0px 114px 0px;
+    li {
+        a {
+            @include a-style;
+            color: #1D1D1D;
+            margin-left: 7px;
+        }
+
+        &:nth-child(2) {
+            a {
+                color: rgba(29, 29, 29, 0.75);
+            }
+        }
+    }
+
+    h1 {
+        color: #212121;
+        font-family: Rubik;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 170%
+    }
+
+    .basket-card {
+        display: flex;
+        width: 100%;
+        height: 211px;
+        padding: 16px 17px;
+        border-radius: 8px;
+        border: 1px solid #E4E4E4;
+        margin-bottom: 24px;
+
+        .imgbox {
+            border-radius: 8px;
+            background: #F9F9F9;
+            margin-right: 24px;
+            width: 151px;
+            height: 179px;
+            @include display-center;
+
+            img {
+                width: 124px;
+                height: 137px;
+            }
+        }
+
+        .basket-main {
+            .basket-title {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 12px;
+            }
+
+            span {
+                color: rgba(33, 33, 33, 0.75);
+                font-family: Poppins;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 170%;
+            }
+
+            .feature {
+                margin-bottom: 8px;
+
+                .basket-color {
+                    margin-left: 23px;
+                }
+            }
+
+            .basket-link {
+                display: flex;
+                float: right;
+                margin-top: 8px;
+
+                .favorit {
+                    cursor: pointer;
+                }
+
+                .remove {
+                    cursor: pointer;
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+
+    .basket-calculate {
+        width: 360px;
+        height: 275px;
+        border-radius: 8px;
+        background: #F9F9F9;
+        
+        .basket-calculate-title {
+            padding: 32px 24px;
+
+            .price {
+                @include display-between;
+
+                span {
+                    @include basket-span;
+                }
+            }
+
+            .free {
+                @include display-between;
+                margin: 12px 0px 20px 0px;
+
+                span {
+                    @include basket-span;
+                }
+            }
+
+            .total-price {
+                @include display-between;
+
+                span {
+                    @include basket-span;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+
+            .line {
+                width: 312px;
+                height: 1px;
+                background-color: #D0D0D0;
+                margin: 24px 0px 22px 0px;
+            }
+
+            .promo-code {
+                display: flex;
+
+                input {
+                    width: 210px;
+                    height: 48px;
+                    color: #888;
+                    font-family: Poppins;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                    border: none;
+                    padding: 16px 15px;
+                }
+
+                button {
+                    width: 102px;
+                    height: 48px;
+                    border: none;
+                    border-radius: 0px 8px 8px 0px;
+                    background: #FF695E;
+
+                    span {
+                        @include basket-span;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+
+        .basket-button {
+            margin-top: 23px;
+            button {
+                width: 360px;
+                height: 52px;
+                border-radius: 8px;
+                background: #DF4244;
+                border:none;
+                span{
+                    @include basket-span;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

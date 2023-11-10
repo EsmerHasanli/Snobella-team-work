@@ -8,12 +8,13 @@ import {
   patchProductsByID,
 } from "./productsrequests.js";
 let swiperWrapper = document.querySelector(".swiper-products");
+let basketListCount = document.querySelector(".basketListCount")
 let products = [];
 document.addEventListener("DOMContentLoaded", async () => {
   products = await getAllProducts();
-  console.log(products);
+//   console.log(products);
   products.forEach((product) => {
-    console.log(swiperWrapper);
+    // console.log(swiperWrapper);
     swiperWrapper.innerHTML += `
     <div class="swiper-slide slider">
     <div class="card">
@@ -101,27 +102,58 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>${product.name}</h3>
             </div>
             <div class="price">
-                <h3>$${product.price}</h3>
-                <span>From $${product.discountPrice}</span>
+                <h3>$${product.price-(product.price*product.discountPercentage/100)} </h3>
+                <span>From $${product.price}</span>
             </div>
             <div class="add-btn">
-                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                <button id=${product.id} type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
             </div>
         </div>
     </div>
 </div>
     `;
+
+    let basketButtons = document.querySelectorAll(".btn-basket");
+    // console.log(basketButtons);
+    let arr = [];
+    if (JSON.parse(localStorage.getItem("basket"))) {
+      arr = JSON.parse(localStorage.getItem("basket"));
+    }
+    basketButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your product has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+        if (arr.find((x)=>x.id == this.id)) {
+            let elem = arr.find((x)=>x.id == this.id)
+            elem.count = elem.count+1
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }else{
+            let obj = {id:this.id,count:1}
+            arr.push(obj)
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }
+      });
+    });
   });
 });
 
-
 let bestSellerWrapper = document.querySelector(".best-seller");
 document.addEventListener("DOMContentLoaded", async () => {
-    products = await getAllProducts();
-    console.log(products);
-    products.forEach((product) => {
-      console.log(swiperWrapper);
-      bestSellerWrapper.innerHTML += `
+  products = await getAllProducts();
+  // console.log(products);
+  products.forEach((product) => {
+    //   console.log(swiperWrapper);
+    bestSellerWrapper.innerHTML += `
     <div class="swiper-slide slider">
     <div class="card">
         <div class="imgbox">
@@ -208,26 +240,57 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>${product.name}</h3>
             </div>
             <div class="price">
-                <h3>$${product.price}</h3>
-                <span>From $${product.discountPrice}</span>
+                <h3>$${product.price-(product.price*product.discountPercentage/100)}</h3>
+                <span>From $${product.price}</span>
             </div>
             <div class="add-btn">
-                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                <button id=${product.id} type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
             </div>
         </div>
     </div>
 </div>
     `;
+    let basketButtons = document.querySelectorAll(".btn-basket");
+    // console.log(basketButtons);
+    let arr = [];
+    if (JSON.parse(localStorage.getItem("basket"))) {
+      arr = JSON.parse(localStorage.getItem("basket"));
+    }
+    basketButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your product has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+        if (arr.find((x)=>x.id == this.id)) {
+            let elem = arr.find((x)=>x.id == this.id)
+            elem.count = elem.count+1
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }else{
+            let obj = {id:this.id,count:1}
+            arr.push(obj)
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }
+      });
     });
   });
+});
 
 let discountProductWrapper = document.querySelector(".discount-product");
 document.addEventListener("DOMContentLoaded", async () => {
-    products = await getAllProducts();
-    console.log(products);
-    products.forEach((product) => {
-      console.log(swiperWrapper);
-      discountProductWrapper.innerHTML += `
+  products = await getAllProducts();
+  console.log(products);
+  products.forEach((product) => {
+    //   console.log(swiperWrapper);
+    discountProductWrapper.innerHTML += `
     <div class="swiper-slide slider">
     <div class="card">
         <div class="imgbox">
@@ -314,15 +377,47 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>${product.name}</h3>
             </div>
             <div class="price">
-                <h3>$${product.price}</h3>
-                <span>From $${product.discountPrice}</span>
+                <h3>$${product.price-(product.price*product.discountPercentage/100)}</h3>
+                <span>From $${product.price}</span>
             </div>
             <div class="add-btn">
-                <button type="button" class="btn btn-outline-dark">Add to card </button>
+                <button id=${product.id} type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
             </div>
         </div>
     </div>
 </div>
     `;
-    });
   });
+  let basketButtons = document.querySelectorAll(".btn-basket");
+    // console.log(basketButtons);
+    let arr = [];
+    if (JSON.parse(localStorage.getItem("basket"))) {
+      arr = JSON.parse(localStorage.getItem("basket"));
+    }
+    basketButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your product has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+
+        if (arr.find((x)=>x.id == this.id)) {
+            let elem = arr.find((x)=>x.id == this.id)
+            elem.count = elem.count+1
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }else{
+            let obj = {id:this.id,count:1}
+            arr.push(obj)
+            localStorage.setItem("basket",JSON.stringify(arr))
+            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
+
+          }
+      });
+    });
+});
+basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length

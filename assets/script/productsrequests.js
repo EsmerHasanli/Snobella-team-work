@@ -25,9 +25,9 @@ export async function getProductsByID (id){
 }
 
 //delete buttons
-export async function deleteProducts(){
+export async function deleteProducts(id){
     let globalData;
-    await axios.delete(API_BASE_URL+`/products`)
+    await axios.delete(API_BASE_URL+`/products/${id}`)
     .then((result) => {
         console.log(result);
         globalData = result.data;
