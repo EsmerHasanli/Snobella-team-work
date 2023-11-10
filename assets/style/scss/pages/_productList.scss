@@ -97,7 +97,8 @@ main{
 //wrapper
 .products-options{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 128px;
 }
 
@@ -293,6 +294,7 @@ main{
     margin-left: 58px;
     .cards-wrapper{
        display: flex;
+       flex-direction: row;
        justify-content: space-between;
        flex-wrap: wrap;
         .card {

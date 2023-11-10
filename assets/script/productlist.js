@@ -6,7 +6,7 @@ const productsCount = document.querySelector('#productsCount');
 //#region  display products
 function displayProducts(product) {
     const productCardHTML = `
-        <div class="card col-6">
+        <div class="card col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div class="imgbox">
                 <img src="${product.imageURL}" alt="">
                 <div class="new">
@@ -63,32 +63,7 @@ productColor.forEach((btn) => {
                     arr.push(filteredProduct)
                     productsCount.textContent = arr.length+' '+'result';
                     console.log(filteredProduct);
-                    productsWrapper.innerHTML += `
-                    <div class="card col-6">
-                    <div class="imgbox">
-                        <img src="${filteredProduct.imageURL}" alt="">
-                        <div class="new">
-                            <span>New</span>
-                        </div>
-                        <!-- Additional SVG code -->
-                    </div>
-                    <div class="card-body">
-                        <div class="rate">
-                            <!-- SVG rating code -->
-                        </div>
-                        <div class="card-title">
-                            <h3>${filteredProduct.name}</h3>
-                        </div>
-                        <div class="price">
-                            <h3>$${filteredProduct.price}</h3>
-                            <span>From $${filteredProduct.discountPrice}</span>
-                        </div>
-                        <div class="add-btn">
-                            <button type="button" class="btn btn-outline-dark">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                    `;
+                    displayProducts(product)
                     localStorage.setItem('filteredProduct', JSON.stringify({ id: product.id, color: product.color }));
                 }
             })
@@ -114,32 +89,7 @@ productCategory.forEach((btn) => {
                     arr.push(filteredProduct)
                     productsCount.textContent = arr.length+' '+'result';
                     console.log(filteredProduct);
-                    productsWrapper.innerHTML += `
-                    <div class="card col-6">
-                    <div class="imgbox">
-                        <img src="${filteredProduct.imageURL}" alt="">
-                        <div class="new">
-                            <span>New</span>
-                        </div>
-                        <!-- Additional SVG code -->
-                    </div>
-                    <div class="card-body">
-                        <div class="rate">
-                            <!-- SVG rating code -->
-                        </div>
-                        <div class="card-title">
-                            <h3>${filteredProduct.name}</h3>
-                        </div>
-                        <div class="price">
-                            <h3>$${filteredProduct.price}</h3>
-                            <span>From $${filteredProduct.discountPrice}</span>
-                        </div>
-                        <div class="add-btn">
-                            <button type="button" class="btn btn-outline-dark">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                    `;
+                    displayProducts(product)
                     localStorage.setItem('filteredProduct', JSON.stringify({ id: product.id, category: product.categories }));
                 }
             })
@@ -165,32 +115,7 @@ productSize.forEach((btn) => {
                     arr.push(filteredProduct)
                     productsCount.textContent = arr.length+' '+'result';
                     console.log(filteredProduct);
-                    productsWrapper.innerHTML += `
-                    <div class="card col-6">
-                    <div class="imgbox">
-                        <img src="${filteredProduct.imageURL}" alt="">
-                        <div class="new">
-                            <span>New</span>
-                        </div>
-                        <!-- Additional SVG code -->
-                    </div>
-                    <div class="card-body">
-                        <div class="rate">
-                            <!-- SVG rating code -->
-                        </div>
-                        <div class="card-title">
-                            <h3>${filteredProduct.name}</h3>
-                        </div>
-                        <div class="price">
-                            <h3>$${filteredProduct.price}</h3>
-                            <span>From $${filteredProduct.discountPrice}</span>
-                        </div>
-                        <div class="add-btn">
-                            <button type="button" class="btn btn-outline-dark">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-                    `;
+                    displayProducts(product)
                     localStorage.setItem('filteredProduct', JSON.stringify({ id: product.id, size: product.size }));
                 }
             })
@@ -223,3 +148,26 @@ searchBtn.addEventListener('click', async () => {
 
 //#endregion
 
+//#region search input 
+
+let searchInput = document.querySelectorAll('.searchInput')
+
+searchInput.forEach((input) => {
+    console.log(input) 
+
+    input.addEventListener('keyup', async () => {
+        productsWrapper.innerHTML = '';
+
+        const products = await getAllProducts();
+
+        products.forEach((product) =>{
+            if(product.name.toLowerCase().trim().includes(input.value.toLowerCase().trim())){
+                displayProducts(product);
+            }
+        });
+
+    })
+
+})
+
+//#endregion

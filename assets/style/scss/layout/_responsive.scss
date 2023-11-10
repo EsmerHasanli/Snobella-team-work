@@ -44,6 +44,21 @@
         }
     }
 
+    //product list
+    #product-cards{
+        .container{
+            max-width: 590px !important;
+        }
+        .cards-wrapper{
+            flex-direction: column;
+        }
+    }
+    .products-options{
+        margin-top: 20px;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
 
     //footer credential part2
     #credential {
@@ -71,6 +86,30 @@
         .input-group{
             display: none !important;
         }
+    }
+
+     //product list
+    #product-cards{
+        .container{
+            max-width: 590px !important;
+        }
+        .cards-wrapper{
+            flex-direction: column !important;
+        }
+    }
+    .products-options{
+        margin-top: 20px;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+
+    //products-page
+    #product-image{
+        display: flex;
+        justify-content: center !important;
+    }
+    #price-cards-wrapper{
+        justify-content: center !important;
     }
 }
 
