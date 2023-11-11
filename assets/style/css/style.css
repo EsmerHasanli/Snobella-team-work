@@ -2210,7 +2210,7 @@ main .dropdown .dropdown-body ul li {
   right: 16px;
 }
 #favorite-products #fav-products .cards-wrapper .card .card-body {
-  padding: 28px 24px;
+  padding: 28px 24px 0 24px;
 }
 #favorite-products #fav-products .cards-wrapper .card .card-body .rate svg {
   margin-left: 6px;
