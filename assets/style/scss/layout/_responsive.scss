@@ -36,7 +36,6 @@
         display: none;
     }
 
-
     //footer base
     #footer{
         #footer-links {
@@ -56,18 +55,31 @@
             flex-direction: column;
         }
     }
+
+    //products option
     .products-options{
         margin-top: 20px;
         flex-direction: column !important;
         justify-content: center !important;
     }
 
-
     //footer credential part2
     #credential {
         ul {
             margin-top: 10px;
             justify-content: flex-start;
+        }
+    }
+
+    //services
+    #services{
+        .services-wrapper{
+            .service-card{
+                border:none !important;
+                h4{
+                    margin-left:0 !important;
+                }
+            }
         }
     }
 }
@@ -117,6 +129,21 @@
     #price-cards-wrapper{
         justify-content: center !important;
     }
+
+        //services
+        #services{
+            .services-wrapper{
+                .service-card{
+                    border:none !important;
+                    h4{
+                        margin-left:0 !important;
+                    }
+                }
+                .service-card:nth-of-type(3){
+                    border:none !important;
+                }
+            }
+        }
 }
 
 /* desktop responsive */
