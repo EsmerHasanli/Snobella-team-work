@@ -960,6 +960,14 @@ footer .footer-body {
   line-height: 170%;
 }
 
+#fav-outlined:hover {
+  cursor: pointer;
+}
+
+#fav-filled:hover {
+  cursor: pointer;
+}
+
 #basket {
   padding: 48px 0px 114px 0px;
 }
