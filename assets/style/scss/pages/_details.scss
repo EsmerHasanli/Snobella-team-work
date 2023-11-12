@@ -329,3 +329,70 @@
         }
     }
 }
+
+#product-recomendations{
+    margin-top: 96px;
+    .product-title{
+        h1{
+            color: #000;
+            font-family: Rubik;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+        }
+        a{
+            color: #000;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 170%; /* 27.2px */
+        }
+    }
+}
+
+.recomended-roducts{
+    .card{
+        background-color:#F9F9F9;
+    }
+    @include products-style;
+}
+
+#services{
+    padding:114px 0 72px 0;
+    .services-wrapper{
+        border: 1px solid #E4E4E4;
+        padding: 35px 50px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .service-card{
+            text-align: center;
+            border-right: 2px solid #E4E4E4 ;
+            border-spacing: 5px 1rem;
+            h4{
+                margin-top: 14px;
+                color: #000;
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 170%; 
+            }
+            p{
+                margin-top: 16px;
+                color: rgba(33, 33, 33, 0.75);
+                font-family: Poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 170%; /* 27.2px */
+            }
+        }
+        .service-card:last-of-type{
+            border-right:none
+        }
+    }
+
+}

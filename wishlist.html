@@ -30,7 +30,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- main css -->
     <link rel="stylesheet" href="./assets/style/css/style.css">
-    <title>Product List</title>
+    <title>Favorites</title>
 </head>
 
 <body>
@@ -92,7 +92,7 @@
                 <div class="col-xl-10 col-md-10 col-10 nav-item d-flex align-items-center justify-content-center">
                     <div class="col-xl-7">
                         <div class="search">
-                            <input class="searchInput" type="text" placeholder="Search all product">
+                            <input type="text" placeholder="Search all product">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none">
                                 <g clip-path="url(#clip0_1_1261)">
@@ -155,7 +155,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="nav-links">
                     <ul>
@@ -183,8 +182,6 @@
 
         </div>
     </nav>
-
-
     <!-- breadcrumbs -->
     <nav id="breadcrumb-links">
         <div class="container">
@@ -196,168 +193,115 @@
                         <path d="M6.66699 4L10.667 8L6.66699 12" stroke="#2B2B2B" stroke-width="2" stroke-linecap="square"/>
                         </svg>
                     </li>
-                    <li class="active">All Products</li>
+                    <li class="active">Favorites</li>
                   </ul>
             </div>
         </div>
       </nav>
 
-    <!-- main -->
     <main>
-        <div class="container">
-            <!-- <div class="row"> -->
-                <div id="heading" class="d-flex justify-content-between">
-                    <h1>Shoulder bags</h1>
-                    <div class="header">
-                        <span id="productsCount"></span>
-                        <button type="button">
-                            Featured
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                <path d="M21 11.6666L14 18.6666L7 11.6666" stroke="#212121" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </button> 
-                    </div>
-                </div>
-                    <div class="products-options">
-                        <aside class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                            <!-- categories -->
-                            <div id="categories" class="dropdown">
-                                <div class="dropdown-header">
-                                    <h2 class="col-2">Categories</h2>
-                                    <svg class="col-1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                        <path d="M7 16.3334L14 9.33337L21 16.3334" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="dropdown-body">
-                                    <ul>
-                                        <li class="productCategory" data-category="backpacks">Backpacks</li>
-                                        <li class="productCategory" data-category="beltbags">Belt Bags</li>
-                                        <li class="productCategory" data-category="handbags">Handbags</li>
-                                        <li class="productCategory" data-category="shoulderbags">Shoulder bags</li>
-                                        <li class="productCategory" data-category="eveninigbags">Evening bags</li>
-                                        <li class="productCategory" data-category="postmanbags">Postman bag</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- materials -->
-                            <div id="material" class="dropdown">
-                                <div class="dropdown-header">
-                                    <h2 class="col-2">Material</h2>
-                                    <svg class="col-1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                        <path d="M7 16.3334L14 9.33337L21 16.3334" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="dropdown-body">
-                                    <form>
-                                        <div>
-                                            <input disabled type="checkbox" id="cloth" name="cloth" value="cloth">
-                                            <label for="cloth"> Cloth </label>
-                                        </div>
-                                        <div>
-                                            <input disabled type="checkbox" id="cotton" name="cotton" value="cotton">
-                                            <label for="cotton"> Cotton </label>
-                                        </div>
-                                        <div>
-                                            <input disabled type="checkbox" id="denim" name="denim" value="denim">
-                                            <label for="denim"> Denim - Jeans </label>
-                                        </div>
-                                        <div>
-                                            <input disabled type="checkbox" id="leathers" name="leathers" value="leathers">
-                                            <label for="leathers"> Exotic Leathers </label>
-                                        </div>
-                                        <div>
-                                            <input disabled type="checkbox" id="fauxfur" name="fauxfur" value="fauxfur">
-                                            <label for="fauxfur"> Faux Fur </label>
-                                        </div>
-                                        <div>
-                                            <input disabled type="checkbox" id="glitter" name="glitter" value="glitter">
-                                            <label for="glitter"> Glitter </label>
-                                        </div>
-                                      </form>
-                                </div>
-                            </div>
-                            <!-- price -->
-                            <div id="price" class="dropdown">
-                                <div class="dropdown-header">
-                                    <h2 class="col-2">Price</h2>
-                                    <svg class="col-1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                        <path d="M7 16.3334L14 9.33337L21 16.3334" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="dropdown-body">
-                                   <p> <input id="min-price-input" class="price-input" type="text"> </p> 
-                                   <span>-</span>
-                                   <p> <input id="max-price-input" class="price-input" type="text"> </p>
+        <section id="favorite-products">
+            <div class="container">
+                <div class="row">
+                    <h1>Favorites</h1>
 
-                                    <article id="search-button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <g clip-path="url(#clip0_1_276)">
-                                              <path d="M19.3608 18.2168L14.6007 13.2662C15.8246 11.8113 16.4952 9.98069 16.4952 8.07499C16.4952 3.62251 12.8727 0 8.42021 0C3.96773 0 0.345215 3.62251 0.345215 8.07499C0.345215 12.5275 3.96773 16.15 8.42021 16.15C10.0917 16.15 11.6846 15.6458 13.0465 14.6888L17.8427 19.677C18.0431 19.8852 18.3128 20 18.6017 20C18.8752 20 19.1347 19.8957 19.3316 19.7061C19.7501 19.3034 19.7635 18.6357 19.3608 18.2168ZM8.42021 2.10652C11.7113 2.10652 14.3887 4.78391 14.3887 8.07499C14.3887 11.3661 11.7113 14.0435 8.42021 14.0435C5.12912 14.0435 2.45173 11.3661 2.45173 8.07499C2.45173 4.78391 5.12912 2.10652 8.42021 2.10652Z" fill="white"/>
+                    <aside id="user-info" class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12"> 
+                        <div class="user-card">
+                            <div class="user-card-header">
+                                <div class="profile-pic">
+                                    <img src="https://s3-alpha-sig.figma.com/img/f114/cf05/dc274c852ffa7887b86279053fca1269?Expires=1700438400&Signature=Y397e-3kY2FD4CCQZHnMLStbsfLZjZEHJJlDk0nsQDft8a5AMLzSodJVHJYOwKISMvikzDdOFYr6Z-xdMCdJhRGjNimJmtgky12wjRtOxkEgbIh3Xgsf~SeedmhUtvxMLo5WQKhCVNHjdmNdPhq0nAbUz48klrTD4PNeeLMXO4zdSdO6aS~2n1QT5CPVvlGhAdTZl9p3v-4yPx99Jv-3LImXgt1xZLrmDrc~XyrirTr0cLmgvlQz-ICDmCSV~Wkgb7nt7Kv8eQHZnFbQO5GjWov0QuMaMB90o5Hs5cssJxJ~~U24aysiYd4yqWVAPQ0B7YUTCWipTkwHJELME0j9jg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="">
+                                </div>
+                                <div class="name">
+                                    <h2>John Smith</h2>
+                                    <h3>Client code: BYL13000</h3>
+                                </div>
+                            </div>
+                            <div class="user-card-body">
+                                <ul>
+                                    <li>
+                                        <a href="./basket.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_1_2268)">
+                                                  <path d="M19.4636 4.25636C19.4636 4.00263 19.3103 3.77401 19.0757 3.67757L10.2379 0.0469287C10.0855 -0.0156429 9.9147 -0.0156429 9.76234 0.0469287L0.924565 3.67757C0.689882 3.77397 0.536621 4.00263 0.536621 4.25636V15.7436C0.536621 15.9974 0.689843 16.226 0.924565 16.3224L9.76234 19.9531C9.91306 20.015 10.0825 20.0163 10.2371 19.953C10.2446 19.9505 9.91005 20.0878 19.0757 16.3224C19.3104 16.226 19.4636 15.9974 19.4636 15.7436V4.25636ZM10.0001 7.26316L6.74373 5.92541L13.7811 2.85546L17.2553 4.28268L10.0001 7.26316ZM1.78805 5.24248L4.59756 6.39666V9.65288C4.59756 9.99844 4.87772 10.2786 5.22327 10.2786C5.56883 10.2786 5.84899 9.99844 5.84899 9.65288V6.91076L9.37439 8.35902V18.4408L1.78805 15.3242V5.24248ZM10.0001 1.30215L12.1692 2.19325L5.13184 5.26321L2.74493 4.28264L10.0001 1.30215ZM10.6258 8.35902L18.2122 5.24248V15.3242L10.6258 18.4408V8.35902Z" fill="#3D4655"/>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_1_2268">
+                                                    <rect width="20" height="20" fill="white"/>
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                              <span>My Orders</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./wishlist.html">                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <g clip-path="url(#clip0_1_2252)">
+                                              <path d="M18.3932 3.30803C16.218 1.13346 12.6795 1.13346 10.5049 3.30803L9.99983 3.81282L9.49504 3.30803C7.32046 1.13316 3.78163 1.13316 1.60706 3.30803C-0.523361 5.43845 -0.537195 8.81539 1.57498 11.1633C3.50142 13.3041 9.18304 17.929 9.4241 18.1247C9.58775 18.2578 9.78467 18.3225 9.9804 18.3225C9.98688 18.3225 9.99335 18.3225 9.99953 18.3222C10.202 18.3316 10.406 18.2622 10.575 18.1247C10.816 17.929 16.4982 13.3041 18.4253 11.163C20.5371 8.8154 20.5233 5.43845 18.3932 3.30803ZM17.1125 9.98186C15.6105 11.6505 11.4818 15.0919 9.99953 16.3131C8.51725 15.0922 4.38944 11.6511 2.88773 9.98215C1.41427 8.34445 1.40044 6.01212 2.85564 4.55691C3.59885 3.814 4.57488 3.44225 5.5509 3.44225C6.52693 3.44225 7.50295 3.8137 8.24616 4.55691L9.3564 5.66715C9.48856 5.79931 9.65516 5.87819 9.82999 5.90586C10.1137 5.96679 10.4216 5.88761 10.6424 5.66745L11.7532 4.55691C13.2399 3.07079 15.6582 3.07109 17.144 4.55691C18.5992 6.01212 18.5854 8.34445 17.1125 9.98186Z" fill="#273142" fill-opacity="0.9"/>
                                             </g>
                                             <defs>
-                                              <clipPath id="clip0_1_276">
+                                              <clipPath id="clip0_1_2252">
                                                 <rect width="20" height="20" fill="white"/>
                                               </clipPath>
                                             </defs>
                                           </svg>
-                                    </article>
-                                </div>
+                                          <span>Favorites</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_1_2272)">
+                                                  <path d="M10 0C4.47327 0 0 4.4725 0 10C0 11.754 0.457458 13.4671 1.32614 14.978L0.0376892 18.9792C-0.0521851 19.2581 0.0216675 19.5639 0.228882 19.7711C0.434113 19.9763 0.739136 20.0529 1.02081 19.9623L5.02197 18.6739C6.5329 19.5425 8.246 20 10 20C15.5267 20 20 15.5275 20 10C20 4.47327 15.5275 0 10 0ZM10 18.4375C8.41568 18.4375 6.87134 17.9955 5.53391 17.1591C5.34149 17.0389 5.10254 17.0064 4.88022 17.0779L1.99188 18.0081L2.92206 15.1198C2.99255 14.9007 2.9628 14.6614 2.84073 14.4661C2.00455 13.1287 1.5625 11.5843 1.5625 10C1.5625 5.3476 5.3476 1.5625 10 1.5625C14.6524 1.5625 18.4375 5.3476 18.4375 10C18.4375 14.6524 14.6524 18.4375 10 18.4375ZM10.9766 10C10.9766 10.5392 10.5394 10.9766 10 10.9766C9.4606 10.9766 9.02344 10.5392 9.02344 10C9.02344 9.4606 9.4606 9.02344 10 9.02344C10.5394 9.02344 10.9766 9.4606 10.9766 10ZM14.8828 10C14.8828 10.5392 14.4456 10.9766 13.9062 10.9766C13.3669 10.9766 12.9297 10.5392 12.9297 10C12.9297 9.4606 13.3669 9.02344 13.9062 9.02344C14.4456 9.02344 14.8828 9.4606 14.8828 10ZM7.07031 10C7.07031 10.5392 6.63315 10.9766 6.09375 10.9766C5.5545 10.9766 5.11719 10.5392 5.11719 10C5.11719 9.4606 5.5545 9.02344 6.09375 9.02344C6.63315 9.02344 7.07031 9.4606 7.07031 10Z" fill="#3D4655"/>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_1_2272">
+                                                    <rect width="20" height="20" fill="white"/>
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                              <span>My comments</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_1_2264)">
+                                                  <path d="M15.919 2.45508C14.3436 0.872921 12.2448 0.00157482 10.0091 0.00157482H9.99948C5.49761 -0.0905673 1.54807 3.87408 1.64076 8.37432C1.7586 11.552 4.81562 15.5877 7.19624 18.6881C7.89537 19.5233 8.91405 20 10.0084 20C11.1412 20 12.1929 19.4896 12.8939 18.5996C14.6599 16.405 18.4734 11.1265 18.3582 8.37424C18.3583 6.13701 17.492 4.03489 15.919 2.45508ZM11.6665 17.6329C10.8592 18.6978 9.16091 18.6997 8.35327 17.6347C5.12525 13.5243 3.20307 10.1012 3.20307 8.37428C3.20307 4.61907 6.25193 1.56401 9.99948 1.56401H10.0091C13.7514 1.56401 16.7959 4.61911 16.7959 8.37428C16.7959 10.12 14.9263 13.4946 11.6665 17.6329ZM10.0434 11.6803C8.21269 11.6803 6.7233 10.191 6.7233 8.36026C6.90567 3.95572 13.1818 3.95701 13.3635 8.3603C13.3635 10.191 11.8741 11.6803 10.0434 11.6803ZM10.0434 6.60257C9.0742 6.60257 8.2857 7.39107 8.2857 8.36026C8.38225 10.6921 11.7049 10.6914 11.8011 8.36026C11.8011 7.39107 11.0126 6.60257 10.0434 6.60257Z" fill="#3D4655"/>
+                                                </g>
+                                                <defs>
+                                                  <clipPath id="clip0_1_2264">
+                                                    <rect width="20" height="20" fill="white"/>
+                                                  </clipPath>
+                                                </defs>
+                                              </svg>
+                                              <span>Addresses</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M13.0152 9.27363C14.2949 8.34031 15.1283 6.82984 15.1283 5.1282C15.1283 2.30051 12.8278 0 10.0001 0C7.1724 0 4.87189 2.30051 4.87189 5.1282C4.87189 6.82984 5.70521 8.34031 6.98498 9.27363C3.80373 10.491 1.53857 13.5754 1.53857 17.1795C1.53857 18.7347 2.80385 20 4.35908 20H15.6411C17.1963 20 18.4616 18.7347 18.4616 17.1795C18.4616 13.5754 16.1965 10.491 13.0152 9.27363ZM6.41037 5.1282C6.41037 3.14883 8.02072 1.53848 10.0001 1.53848C11.9795 1.53848 13.5898 3.14883 13.5898 5.1282C13.5898 7.10758 11.9795 8.71797 10.0001 8.71797C8.02072 8.71797 6.41037 7.10758 6.41037 5.1282ZM15.6411 18.4615H4.35908C3.65217 18.4615 3.07705 17.8864 3.07705 17.1795C3.07705 13.362 6.18268 10.2564 10.0001 10.2564C13.8176 10.2564 16.9232 13.362 16.9232 17.1795C16.9232 17.8864 16.3481 18.4615 15.6411 18.4615Z" fill="#273142" fill-opacity="0.9"/>
+                                              </svg>
+                                              <span>Adjustments</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <!-- size -->
-                            <div id="size" class="dropdown">
-                                <div class="dropdown-header">
-                                    <h2 class="col-2">Size</h2>
-                                    <svg class="col-1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                        <path d="M7 16.3334L14 9.33337L21 16.3334" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="dropdown-body">
-                                   <p class="productSize" data-size="xs">xs</p> 
-                                   <p class="productSize" data-size="s">s</p>
-                                   <p class="productSize" data-size="m">m</p>
-                                </div>
-                            </div>         
-                            <!-- color -->
-                            <div id="color" class="dropdown">
-                                <div class="dropdown-header">
-                                    <h2 class="col-2">Color</h2>
-                                    <svg class="col-1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                                        <path d="M7 16.3334L14 9.33337L21 16.3334" stroke="#2E2E2E" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="dropdown-body">
-                                    <ul>
-                                        <li class="productColor" data-color="darkgreen"></li>
-                                        <li class="productColor" data-color="lightblue"></li>
-                                        <li class="productColor" data-color="darkpurple"></li>
-                                        <li class="productColor" data-color="sanguine"></li>
-                                        <li class="productColor" data-color="black"></li>
-                                        <li class="productColor" data-color="green"></li>
-                                        <li class="productColor" data-color="blue"></li>
-                                        <li class="productColor" data-color="orange"></li>
-                                        <li class="productColor" data-color="yellow"></li>
-                                        <li class="productColor" data-color="lightviolet"></li>
-                                        <li class="productColor" data-color="pink"></li>
-                                        <li class="productColor" data-color="purple"></li>
-                                        <li class="productColor" data-color="lightbrown"></li>
-                                    </ul>
-                                </div>
-                            </div>    
-                        </aside>
-                        <section id="product-cards" class="col-9">
-                            <div class="cards-wrapper">
-                                <!-- loader -->
-                                <div id="loader" class="spinner-border text-secondary m-auto" role="status">
-                                    <span class="sr-only"></span>
-                                </div>
-                                <!-- cards -->
+                        </div>
+                    </aside>
 
-                            </div>
-                        </section>
-                    </div>
-            <!-- </div> -->
-        </div>
+                    <section id="fav-products" class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="cards-wrapper d-flex justify-content-between align-items-center">
+
+                        </div>
+
+                    </section>
+
+                </div>
+            </div>
+        </section>
     </main>
+
 
     <!-- footer -->
     <footer id="footer">
@@ -368,7 +312,7 @@
                         <h1>Snobella</h1>
                     </div>
                     <div class="input-group col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 search-input">
-                        <input type="text" class="form-control searchInput" placeholder="Search all product"
+                        <input type="text" class="form-control" placeholder="Search all product"
                             aria-label="Recipient's username" aria-describedby="button-addon2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <g clip-path="url(#clip0_1_1583)">
@@ -532,6 +476,10 @@
     </footer>
 
 
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -552,10 +500,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- lightbox js -->
     <!-- <script src="path/to/lightbox.js"></script> -->
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
     <!-- main script -->
-    <script type="module" src="./assets/script/productlist.js"></script>
+    <script type="module" src="./assets/script/wishlist.js"></script>
 </body>
 
 </html>
