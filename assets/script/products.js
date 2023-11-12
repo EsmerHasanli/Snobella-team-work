@@ -8,28 +8,30 @@ import {
   patchProductsByID,
 } from "./productsrequests.js";
 let swiperWrapper = document.querySelector(".swiper-products");
-let basketListCount = document.querySelector(".basketListCount")
+let basketListCount = document.querySelector(".basketListCount");
 let products = [];
 document.addEventListener("DOMContentLoaded", async () => {
   products = await getAllProducts();
-//   console.log(products);
+  //   console.log(products);
   products.forEach((product) => {
     // console.log(swiperWrapper);
     swiperWrapper.innerHTML += `
     <div class="swiper-slide slider">
     <div class="card">
-        <div class="imgbox">
-            <img src="${product.imageURL}" alt="">
-            <div class="new">
-                <span>New</span>
+       <a href="details.html?id=${product.id}">
+                <div class="imgbox">
+                <img src="${product.imageURL}" alt="">
+                <div class="new">
+                    <span>New</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                    fill="none">
+                    <path
+                        d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
+                        stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
+                </svg>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
-                fill="none">
-                <path
-                    d="M10.9997 19.25L9.67051 18.0631C4.94967 13.8639 1.83301 11.0944 1.83301 7.6955C1.83301 4.92602 4.05134 2.75 6.87467 2.75C8.46967 2.75 10.0005 3.47834 10.9997 4.62929C11.9988 3.47834 13.5297 2.75 15.1247 2.75C17.948 2.75 20.1663 4.92602 20.1663 7.6955C20.1663 11.0944 17.0497 13.8639 12.3288 18.0721L10.9997 19.25Z"
-                    stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
-            </svg>
-        </div>
+       </a>
         <div class="card-body">
             <div class="rate">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
@@ -102,11 +104,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>${product.name}</h3>
             </div>
             <div class="price">
-                <h3>$${product.price-(product.price*product.discountPercentage/100)} </h3>
+                <h3>$${
+                  product.price -
+                  (product.price * product.discountPercentage) / 100
+                } </h3>
                 <span>From $${product.price}</span>
             </div>
             <div class="add-btn">
-                <button id=${product.id} type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
+                <button id=${
+                  product.id
+                } type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
             </div>
         </div>
     </div>
@@ -122,26 +129,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     basketButtons.forEach((btn) => {
       btn.addEventListener("click", function () {
         Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your product has been saved',
-            showConfirmButton: false,
-            timer: 1500
-          })
+          position: "top-end",
+          icon: "success",
+          title: "Your product has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
 
-        if (arr.find((x)=>x.id == this.id)) {
-            let elem = arr.find((x)=>x.id == this.id)
-            elem.count = elem.count+1
-            localStorage.setItem("basket",JSON.stringify(arr))
-            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
-
-          }else{
-            let obj = {id:this.id,count:1}
-            arr.push(obj)
-            localStorage.setItem("basket",JSON.stringify(arr))
-            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
-
-          }
+        if (arr.find((x) => x.id == this.id)) {
+          let elem = arr.find((x) => x.id == this.id);
+          elem.count = elem.count + 1;
+          localStorage.setItem("basket", JSON.stringify(arr));
+          basketListCount.textContent = JSON.parse(
+            localStorage.getItem("basket")
+          ).length;
+        } else {
+          let obj = { id: this.id, count: 1 };
+          arr.push(obj);
+          localStorage.setItem("basket", JSON.stringify(arr));
+          basketListCount.textContent = JSON.parse(
+            localStorage.getItem("basket")
+          ).length;
+        }
       });
     });
   });
@@ -156,7 +165,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     bestSellerWrapper.innerHTML += `
     <div class="swiper-slide slider">
     <div class="card">
-        <div class="imgbox">
+    <a href="details.html?id=${product.id}">
+            <div class="imgbox">
             <img src="${product.imageURL}" alt="">
             <div class="new">
                 <span>New</span>
@@ -168,6 +178,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
             </svg>
         </div>
+    </a>
         <div class="card-body">
             <div class="rate">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
@@ -240,11 +251,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>${product.name}</h3>
             </div>
             <div class="price">
-                <h3>$${product.price-(product.price*product.discountPercentage/100)}</h3>
+                <h3>$${
+                  product.price -
+                  (product.price * product.discountPercentage) / 100
+                }</h3>
                 <span>From $${product.price}</span>
             </div>
             <div class="add-btn">
-                <button id=${product.id} type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
+                <button id=${
+                  product.id
+                } type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
             </div>
         </div>
     </div>
@@ -259,26 +275,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     basketButtons.forEach((btn) => {
       btn.addEventListener("click", function () {
         Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your product has been saved',
-            showConfirmButton: false,
-            timer: 1500
-          })
+          position: "top-end",
+          icon: "success",
+          title: "Your product has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
 
-        if (arr.find((x)=>x.id == this.id)) {
-            let elem = arr.find((x)=>x.id == this.id)
-            elem.count = elem.count+1
-            localStorage.setItem("basket",JSON.stringify(arr))
-            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
-
-          }else{
-            let obj = {id:this.id,count:1}
-            arr.push(obj)
-            localStorage.setItem("basket",JSON.stringify(arr))
-            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
-
-          }
+        if (arr.find((x) => x.id == this.id)) {
+          let elem = arr.find((x) => x.id == this.id);
+          elem.count = elem.count + 1;
+          localStorage.setItem("basket", JSON.stringify(arr));
+          basketListCount.textContent = JSON.parse(
+            localStorage.getItem("basket")
+          ).length;
+        } else {
+          let obj = { id: this.id, count: 1 };
+          arr.push(obj);
+          localStorage.setItem("basket", JSON.stringify(arr));
+          basketListCount.textContent = JSON.parse(
+            localStorage.getItem("basket")
+          ).length;
+        }
       });
     });
   });
@@ -293,7 +311,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     discountProductWrapper.innerHTML += `
     <div class="swiper-slide slider">
     <div class="card">
-        <div class="imgbox">
+    <a href="details.html?id=${product.id}">
+            <div class="imgbox">
             <img src="${product.imageURL}" alt="">
             <div class="new">
                 <span>New</span>
@@ -305,6 +324,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     stroke="#DF4244" stroke-width="2" stroke-linecap="square" />
             </svg>
         </div>
+    </a>
         <div class="card-body">
             <div class="rate">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
@@ -377,11 +397,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h3>${product.name}</h3>
             </div>
             <div class="price">
-                <h3>$${product.price-(product.price*product.discountPercentage/100)}</h3>
+                <h3>$${
+                  product.price -
+                  (product.price * product.discountPercentage) / 100
+                }</h3>
                 <span>From $${product.price}</span>
             </div>
             <div class="add-btn">
-                <button id=${product.id} type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
+                <button id=${
+                  product.id
+                } type="button" class="btn btn-outline-dark btn-basket">Add to card </button>
             </div>
         </div>
     </div>
@@ -389,35 +414,37 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   });
   let basketButtons = document.querySelectorAll(".btn-basket");
-    // console.log(basketButtons);
-    let arr = [];
-    if (JSON.parse(localStorage.getItem("basket"))) {
-      arr = JSON.parse(localStorage.getItem("basket"));
-    }
-    basketButtons.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your product has been saved',
-            showConfirmButton: false,
-            timer: 1500
-          })
-
-        if (arr.find((x)=>x.id == this.id)) {
-            let elem = arr.find((x)=>x.id == this.id)
-            elem.count = elem.count+1
-            localStorage.setItem("basket",JSON.stringify(arr))
-            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
-
-          }else{
-            let obj = {id:this.id,count:1}
-            arr.push(obj)
-            localStorage.setItem("basket",JSON.stringify(arr))
-            basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;
-
-          }
+  // console.log(basketButtons);
+  let arr = [];
+  if (JSON.parse(localStorage.getItem("basket"))) {
+    arr = JSON.parse(localStorage.getItem("basket"));
+  }
+  basketButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your product has been saved",
+        showConfirmButton: false,
+        timer: 1500,
       });
+
+      if (arr.find((x) => x.id == this.id)) {
+        let elem = arr.find((x) => x.id == this.id);
+        elem.count = elem.count + 1;
+        localStorage.setItem("basket", JSON.stringify(arr));
+        basketListCount.textContent = JSON.parse(
+          localStorage.getItem("basket")
+        ).length;
+      } else {
+        let obj = { id: this.id, count: 1 };
+        arr.push(obj);
+        localStorage.setItem("basket", JSON.stringify(arr));
+        basketListCount.textContent = JSON.parse(
+          localStorage.getItem("basket")
+        ).length;
+      }
     });
+  });
 });
-basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length
+basketListCount.textContent = JSON.parse(localStorage.getItem("basket")).length;

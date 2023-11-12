@@ -61,6 +61,15 @@
     line-height: 170%;
 }
 
+
+@mixin desc-li-style {
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%;
+}
+
 @mixin products-style {
     margin-bottom: 96px;
 
